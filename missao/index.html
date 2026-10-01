@@ -1,0 +1,1703 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Missão McAfee · Trilha de vendas</title>
+<style>
+:root{
+  --navy:#0B1F3A;--navy2:#13315c;--ink:#1B2A41;--muted:#5B6B82;--bg:#F3F5F9;--card:#fff;--line:#E2E7EF;
+  --orange:#F26A1B;--amber:#FFB84D;--teal:#0E8F80;--teal-bg:#E3F5F2;
+  --green:#17804A;--green-bg:#E4F5EB;--yellow:#8A5A00;--yellow-bg:#FFF3D6;--red:#B83232;--red-bg:#FCE8E8;
+  --r:16px;--ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;overflow-x:hidden}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+p{margin:0 0 12px}
+h1{font-size:26px;line-height:1.2;margin:0 0 8px;color:var(--navy)}
+h2{font-size:20px;margin:0 0 8px;color:var(--navy)}
+
+/* ---------- topo ---------- */
+.top{background:var(--navy);color:#fff;padding:14px 16px 12px;position:sticky;top:0;z-index:20}
+.top-in{max-width:820px;margin:0 auto;display:flex;align-items:center;gap:12px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px}
+.logo{width:26px;height:26px;border-radius:50%;background:linear-gradient(180deg,#FFB84D 0 52%,#F26A1B 52% 100%);position:relative;flex:none}
+.logo:after{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background:var(--navy);transform:translateY(-1px)}
+.score{font-size:13px;background:rgba(255,255,255,.12);padding:4px 12px;border-radius:999px;white-space:nowrap;display:inline-block}
+.score.bump{animation:bump .5s var(--ease)}
+@keyframes bump{40%{transform:scale(1.25);background:var(--amber);color:var(--navy)}}
+.steps{max-width:820px;margin:10px auto 0;display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.steps div{font-size:11px;text-align:center;opacity:.6;transition:opacity .3s}
+.steps div i{display:block;height:5px;border-radius:3px;background:rgba(255,255,255,.2);margin-bottom:4px;position:relative;overflow:hidden}
+.steps div i:after{content:"";position:absolute;inset:0;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .8s var(--ease)}
+.steps div.done{opacity:1}.steps div.done i:after{transform:scaleX(1)}
+.steps div.now{opacity:1;font-weight:700}.steps div.now i{background:#fff}
+
+main{max-width:820px;margin:0 auto;padding:18px 16px 56px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;margin-top:14px}
+main>.card:first-child{margin-top:0}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
+.lead{font-size:17px;color:var(--muted)}
+ul.clean{margin:0 0 12px;padding-left:20px}
+ul.clean li{margin:4px 0}
+.btn{display:inline-flex;align-items:center;gap:10px;border:0;border-radius:12px;background:var(--navy);color:#fff;font-weight:600;padding:13px 22px;min-height:48px;position:relative;overflow:hidden;transition:transform .15s,background .2s}
+.btn:hover{background:var(--navy2);transform:translateY(-1px)}
+.btn:active{transform:translateY(1px) scale(.98)}
+.btn.ghost{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+.btn.call{background:var(--green)}.btn.call:hover{background:#126a3d}
+.btn.go{background:var(--orange)}.btn.go:hover{background:#d85a10}
+.next{margin-top:16px;text-align:right}
+
+/* ---------- animações de entrada ---------- */
+.rise{animation:rise .55s var(--ease) both}
+.rise.d1{animation-delay:.08s}.rise.d2{animation-delay:.16s}.rise.d3{animation-delay:.24s}.rise.d4{animation-delay:.32s}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.pop{animation:pop .5s var(--ease) both}
+@keyframes pop{from{opacity:0;transform:scale(.88)}to{opacity:1;transform:none}}
+
+/* ---------- hub / intro de fase ---------- */
+.phases{display:grid;gap:10px;margin:16px 0}
+.phase{display:flex;gap:14px;align-items:center;background:var(--bg);border-radius:12px;padding:12px 14px}
+.phase .n{width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700;flex:none}
+.phase.g .n{background:var(--orange)}
+.phase b{display:block}.phase span{color:var(--muted);font-size:14px}
+.splash{text-align:center;padding:34px 22px}
+.splash .badge{display:inline-grid;place-items:center;width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--amber));font-size:38px;margin-bottom:12px;animation:float 3s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+
+/* ---------- videochamada ---------- */
+.screen{position:relative;background:#0a1220;border-radius:var(--r);overflow:hidden;aspect-ratio:16/9;box-shadow:0 8px 30px rgba(11,31,58,.25)}
+.screen video,.screen img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.tag{position:absolute;left:12px;top:12px;background:rgba(10,18,32,.65);color:#fff;font-size:13px;padding:5px 10px;border-radius:8px;display:flex;align-items:center;gap:8px;backdrop-filter:blur(4px)}
+.live{width:8px;height:8px;border-radius:50%;background:#ff4d4d;animation:pulse 1.4s infinite}
+@keyframes pulse{50%{opacity:.3;transform:scale(.7)}}
+.pip{position:absolute;right:12px;top:12px;width:22%;max-width:150px;aspect-ratio:4/3;background:linear-gradient(135deg,#223a5e,#13233d);border:1.5px solid rgba(255,255,255,.25);border-radius:10px;display:grid;place-items:center;color:#fff;font-size:12px}
+.pip svg{width:38%;opacity:.6;margin-bottom:14px}
+.pip span{position:absolute;bottom:5px;left:8px;font-size:11px;opacity:.85}
+.ctl{position:absolute;right:12px;bottom:12px;display:flex;gap:8px}
+.ctl button{background:rgba(10,18,32,.65);color:#fff;border:0;border-radius:999px;padding:7px 13px;font-size:13px;min-height:34px;backdrop-filter:blur(4px)}
+.cc{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;background:linear-gradient(transparent,rgba(5,10,20,.88));color:#fff;font-size:clamp(14px,2.3vw,18px);line-height:1.4}
+.cc:empty{display:none}
+.cc.has-ctl{padding-right:150px}
+.cc.swap{animation:ccin .35s var(--ease)}
+@keyframes ccin{from{opacity:0;transform:translateY(8px)}}
+.playfix{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:5;background:var(--orange);color:#fff;border:0;border-radius:999px;padding:14px 26px;font-weight:700;font-size:16px;box-shadow:0 8px 24px rgba(0,0,0,.4);animation:pop .4s var(--ease) both}
+.rd{border:1px solid var(--line);border-radius:12px;margin:10px 0;background:#fff;overflow:hidden}
+.rd summary{padding:14px 16px;font-weight:700;cursor:pointer;color:var(--navy);list-style:none;display:flex;justify-content:space-between;gap:10px}
+.rd summary::-webkit-details-marker{display:none}
+.rd summary:after{content:"+";font-weight:400;font-size:20px;line-height:1}
+.rd[open] summary:after{content:"–"}
+.rd .bd{padding:0 16px 16px;font-size:15px}
+.rd table{width:100%;border-collapse:collapse;margin:8px 0;font-size:14px}
+.rd th{background:var(--navy);color:#fff;text-align:left;padding:8px 10px;font-weight:600;font-size:13px}
+.rd td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.rd td.y{color:var(--green);font-weight:700}.rd td.n{color:var(--muted)}
+.rd ol,.rd ul{margin:6px 0 10px;padding-left:20px}
+.rd .warn{background:var(--red-bg);border-radius:10px;padding:10px 12px;color:#6E1C1C;margin-top:8px}
+.skipbar{background:var(--green-bg);border:1.5px solid #9fd8b6;border-radius:14px;padding:14px 16px;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:14px 0}
+.skipbar span{color:#0F5233;font-size:15px}
+.ctlv{position:absolute;right:12px;top:12px}
+.ctlv button{background:rgba(10,18,32,.65);color:#fff;border:0;border-radius:999px;padding:6px 12px;font-size:13px;min-height:32px}
+.ring{position:absolute;inset:0;border-radius:var(--r);box-shadow:inset 0 0 0 0 transparent;pointer-events:none}
+.ring.good{animation:ringg .9s ease-out}.ring.bad{animation:ringb .9s ease-out}
+@keyframes ringg{0%{box-shadow:inset 0 0 0 6px rgba(23,180,90,.95)}100%{box-shadow:inset 0 0 0 0 rgba(23,180,90,0)}}
+@keyframes ringb{0%{box-shadow:inset 0 0 0 6px rgba(220,60,60,.95)}100%{box-shadow:inset 0 0 0 0 rgba(220,60,60,0)}}
+.meter{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-top:10px;display:flex;align-items:center;gap:12px;font-size:14px}
+.meter b{white-space:nowrap}
+.bar{flex:1;height:10px;background:var(--bg);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:50%;border-radius:6px;background:linear-gradient(90deg,var(--red),var(--amber),var(--green));background-size:400px 100%;transition:width .9s cubic-bezier(.3,1.5,.5,1)}
+.mood{min-width:108px;text-align:right;font-weight:600;color:var(--navy)}
+.ctx{font-size:13px;color:var(--muted);margin-bottom:10px}
+.q{font-weight:600;margin:0 0 10px;color:var(--navy)}
+.opts{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.opts.hidden{display:none}
+.opts li{animation:rise .5s var(--ease) both}
+.opts li:nth-child(2){animation-delay:.1s}.opts li:nth-child(3){animation-delay:.2s}.opts li:nth-child(4){animation-delay:.3s}.opts li:nth-child(5){animation-delay:.4s}.opts li:nth-child(6){animation-delay:.5s}
+.wait{color:var(--muted);font-size:14px;display:flex;gap:10px;align-items:center}
+.wave{display:inline-flex;gap:3px;align-items:flex-end;height:16px}
+.wave i{width:3px;background:var(--orange);border-radius:2px;animation:wave 1s ease-in-out infinite}
+.wave i:nth-child(2){animation-delay:.15s}.wave i:nth-child(3){animation-delay:.3s}.wave i:nth-child(4){animation-delay:.45s}
+@keyframes wave{0%,100%{height:4px}50%{height:16px}}
+.opt{width:100%;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;line-height:1.45;transition:border-color .15s,background .15s,transform .15s,opacity .3s}
+.opt:hover:not(:disabled){border-color:var(--navy);background:#FAFBFD;transform:translateX(4px)}
+.opt:disabled{cursor:default;opacity:.45}
+.opt.picked{opacity:1;border-color:var(--navy);border-width:2px;background:#FAFBFD;animation:pick .45s var(--ease)}
+@keyframes pick{40%{transform:scale(1.02)}}
+.fb{border-radius:12px;padding:16px;margin-top:16px;animation:rise .5s var(--ease) both}
+.fb.p2{background:var(--green-bg);color:#0F5233}
+.fb.p1{background:var(--yellow-bg);color:#5C3C00}
+.fb.p0{background:var(--red-bg);color:#7A1F1F}
+.fb .tagline{font-weight:700;margin-bottom:4px;display:flex;gap:8px;align-items:center}
+.fb .best{margin-top:10px;padding-top:10px;border-top:1px solid rgba(0,0,0,.12);font-size:15px}
+.src{font-size:13px;margin-top:10px;opacity:.85}
+.memo{margin-top:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.65);font-size:15px;font-weight:600}
+.later{background:var(--bg);border-left:5px solid var(--navy);border-radius:12px;padding:14px 16px;margin:14px 0}
+.later b{display:block;color:var(--navy);margin-bottom:4px}.later p{margin:6px 0 0}
+.aid{background:var(--teal-bg);border-radius:12px;padding:14px 16px;margin:0 0 14px;font-size:15px}
+.aid table{width:100%;border-collapse:collapse;margin-top:6px}
+.aid td{text-align:left;padding:5px 0;border-bottom:1px solid rgba(14,143,128,.2)}
+.aid tr:last-child td{border:0}
+.client{display:flex;gap:14px;background:var(--bg);border-radius:12px;padding:14px;margin:16px 0}
+.avatar{width:56px;height:56px;border-radius:50%;flex:none;background-size:cover;background-position:center 25%}
+.client b{display:block}.client span{color:var(--muted);font-size:14px}
+
+/* ---------- caça-golpe ---------- */
+.game{background:radial-gradient(120% 90% at 50% 0,#1b3a6b 0,#0B1F3A 60%);border-radius:var(--r);padding:18px 16px 22px;color:#fff;overflow:hidden;position:relative}
+.g-head{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin-bottom:10px}
+.streak{background:rgba(255,255,255,.12);padding:3px 12px;border-radius:999px;font-weight:700}
+.streak.hot{animation:bump .5s var(--ease)}
+.timer{height:8px;border-radius:5px;background:rgba(255,255,255,.15);overflow:hidden;margin-bottom:14px}
+.timer i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#ff5a5a,#FFB84D 40%,#37d67a);background-size:300% 100%;transform-origin:left}
+.deck{position:relative;min-height:290px;display:grid;place-items:center;perspective:900px}
+.deck:before,.deck:after{content:"";position:absolute;left:8%;right:8%;top:14px;bottom:-4px;background:rgba(255,255,255,.08);border-radius:18px;transform:scale(.94)}
+.deck:after{left:14%;right:14%;top:24px;background:rgba(255,255,255,.05);transform:scale(.88)}
+.gcard{position:relative;z-index:2;width:100%;background:#fff;color:var(--ink);border-radius:18px;padding:16px;box-shadow:0 14px 40px rgba(0,0,0,.4);touch-action:pan-y;user-select:none;cursor:grab;transition:transform .35s var(--ease),opacity .3s}
+.gcard.enter{animation:cardin .5s var(--ease) both}
+@keyframes cardin{from{opacity:0;transform:translateY(40px) scale(.9) rotate(3deg)}}
+.gcard.drag{transition:none;cursor:grabbing}
+.gcard .stamp{position:absolute;top:14px;padding:4px 12px;border:3px solid;border-radius:8px;font-weight:800;font-size:18px;letter-spacing:.05em;opacity:0;transform:rotate(-12deg)}
+.gcard .stamp.s{right:14px;color:#D64545;border-color:#D64545;transform:rotate(12deg)}
+.gcard .stamp.l{left:14px;color:#17804A;border-color:#17804A}
+.gcard.shake{animation:shake .45s}
+@keyframes shake{20%,60%{transform:translateX(-10px)}40%,80%{transform:translateX(10px)}}
+.gbtns{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.gbtn{border:0;border-radius:14px;padding:14px;font-weight:700;font-size:16px;min-height:52px;transition:transform .15s}
+.gbtn:active{transform:scale(.96)}
+.gbtn.s{background:#D64545;color:#fff}.gbtn.l{background:#17804A;color:#fff}
+.gbtn:disabled{opacity:.4}
+.ghint{text-align:center;font-size:12px;opacity:.65;margin-top:8px}
+.gfb{margin-top:14px;border-radius:14px;padding:14px 16px;animation:rise .4s var(--ease) both;color:var(--ink);background:#fff}
+.gfb.ok{border-left:6px solid var(--green)}.gfb.no{border-left:6px solid var(--red)}
+.gfb h3{margin:0 0 6px;font-size:16px}
+.gfb ul{margin:4px 0 8px;padding-left:18px;font-size:14px}
+.gfb .mc{font-size:14px;background:var(--teal-bg);border-radius:8px;padding:8px 10px;margin-top:6px}
+.confetti{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.confetti i{position:absolute;top:-10px;width:8px;height:14px;border-radius:2px;animation:fall 1.6s ease-in forwards}
+@keyframes fall{to{transform:translateY(520px) rotate(540deg);opacity:0}}
+/* mock das mensagens */
+.m-from{font-size:12px;color:#6b7686;margin-bottom:6px;display:flex;gap:8px;align-items:center}
+.m-tag{font-size:11px;background:#E8EEF8;color:#36507a;border-radius:6px;padding:2px 8px;font-weight:700}
+.m-sms .bub{background:#E9EEF5;border-radius:16px 16px 16px 4px;padding:12px 14px;font-size:15px;max-width:94%}
+.m-wa .bub{background:#DCF8C6;border-radius:12px 12px 12px 2px;padding:10px 12px;font-size:15px;max-width:92%}
+.m-wa .head{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+.m-wa .ava{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#8ea3c2,#5d7394);display:grid;place-items:center;color:#fff;font-weight:700}
+.m-mail .row{font-size:13px;color:#56657d;border-bottom:1px solid var(--line);padding:3px 0}
+.m-mail .row b{color:var(--ink)}
+.m-mail .body{padding-top:10px;font-size:15px}
+.chip{display:inline-block;margin-top:8px;background:#EEF1F6;border:1px solid var(--line);border-radius:8px;padding:5px 10px;font-size:13px}
+.m-site .bar2{display:flex;gap:8px;align-items:center;background:#EEF1F6;border-radius:999px;padding:7px 12px;font-size:13px;word-break:break-all;margin-bottom:10px}
+.m-site .login{border:1px solid var(--line);border-radius:10px;padding:12px;font-size:14px}
+.m-site .login div{background:#F4F6FA;border-radius:6px;padding:8px;margin-top:6px;color:#8a95a8}
+.m-site .login b{display:block;margin-bottom:2px;color:var(--navy)}
+.m-wifi .net{display:flex;justify-content:space-between;padding:8px 10px;border-radius:8px;background:#F4F6FA;margin-bottom:6px;font-size:14px}
+.m-wifi .portal{border:1px solid var(--line);border-radius:10px;padding:12px;font-size:14px;margin-top:8px}
+.m-wifi .portal div{background:#F4F6FA;border-radius:6px;padding:8px;margin-top:6px;color:#8a95a8}
+.ctxline{font-size:12px;color:#6b7686;margin-bottom:8px;font-style:italic}
+.lk{display:inline;border:0;background:none;padding:0;color:#1a5fd0;text-decoration:underline;font-weight:600;cursor:pointer;font-size:inherit}
+.lk.rev{color:#7a1f1f;background:#FCE8E8;border-radius:6px;padding:1px 6px;text-decoration:none;word-break:break-all;cursor:default}
+.m-wa .head,.m-ad .head,.m-dm .head{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+.m-wa .head .m-tag,.m-ad .head .m-tag,.m-dm .head .m-tag,.m-call .who .m-tag{margin-left:auto}
+.m-wa .bub+.bub{margin-top:6px}
+.m-wa code{font-size:12px;word-break:break-all}
+.aud{display:flex;align-items:center;gap:8px;font-weight:700}.aud i{flex:1;height:14px;background:repeating-linear-gradient(90deg,#4a7a3a 0 2px,transparent 2px 5px);opacity:.6;border-radius:3px}
+.tr{font-size:13px;color:#3d5233;margin-top:6px;font-style:italic}
+.m-call .who{display:flex;gap:10px;align-items:center;margin-bottom:10px}.m-call .who span{display:block;font-size:12px;color:#6b7686}
+.m-call .ava,.m-ad .ava,.m-dm .ava{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#8ea3c2,#5d7394);display:grid;place-items:center;color:#fff;font-weight:700;flex:none}
+.m-call .bub{background:#EEF1F6;border-radius:12px;padding:10px 12px;font-size:15px}
+.m-rcpt,.m-pixa{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px}
+.m-rcpt b,.m-pixa b{display:block;margin:6px 0 4px;color:var(--navy)}
+.m-rcpt .amt{font-size:26px;font-weight:800;color:var(--navy);margin-bottom:4px}
+.ln{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding:5px 0}.ln span:first-child{color:#6b7686}.ln span:last-child{text-align:right;font-weight:600}
+.m-pixa .fake{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.m-pixa .fake span{text-align:center;border-radius:8px;padding:7px;background:#EEF1F6;font-weight:600}.m-pixa .fake span:last-child{background:#13315c;color:#fff}
+.m-push{background:#F4F6FA;border-radius:16px;padding:12px 14px;font-size:14px;box-shadow:0 2px 8px rgba(0,0,0,.08)}.m-push .ph{font-size:12px;color:#6b7686;margin-bottom:4px;display:flex;gap:6px;align-items:center}
+.m-pop .bar2{display:flex;gap:8px;align-items:center;background:#EEF1F6;border-radius:999px;padding:7px 12px;font-size:13px;word-break:break-all;margin-bottom:10px}
+.m-pop .alert{background:#B83232;color:#fff;border-radius:10px;padding:14px;font-size:14px}.m-pop .alert b{display:block;font-size:16px;margin-bottom:4px}
+.m-ad .bub,.m-dm .bub{background:#F4F6FA;border-radius:12px;padding:10px 12px;font-size:15px}
+.gfb h3 .new{font-size:11px;background:var(--orange);color:#fff;border-radius:6px;padding:2px 7px;vertical-align:middle;font-weight:700}
+
+/* ---------- resultado ---------- */
+.big{font-size:54px;font-weight:800;color:var(--navy);line-height:1;position:relative}
+.ringsvg{width:150px;height:150px;display:block;margin:6px auto 10px}
+.ringsvg circle{fill:none;stroke-width:12;stroke-linecap:round}
+.ringsvg .bg{stroke:#E6EBF3}
+.ringsvg .fg{stroke:var(--green);stroke-dasharray:440;stroke-dashoffset:440;transition:stroke-dashoffset 1.6s var(--ease);transform:rotate(-90deg);transform-origin:50% 50%}
+.ringsvg.fail .fg{stroke:var(--red)}
+.ringnum{position:relative;text-align:center;margin-top:-112px;height:112px;display:grid;place-items:center;font-size:38px;font-weight:800;color:var(--navy)}
+.verdict{display:inline-block;font-weight:700;padding:4px 12px;border-radius:999px;margin:10px 0}
+.verdict.ok{background:var(--green-bg);color:var(--green)}.verdict.no{background:var(--red-bg);color:var(--red)}
+table.recap{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
+table.recap td{padding:8px 0;border-bottom:1px solid var(--line)}
+table.recap td:last-child{text-align:right;white-space:nowrap;font-weight:600}
+.pocket{border:2px dashed var(--navy);border-radius:14px;padding:16px 18px;margin-top:18px;background:#FFFDF7}
+.pocket h3{margin:0 0 8px;font-size:16px;color:var(--navy)}
+.pocket ol{margin:0;padding-left:20px}.pocket li{margin:6px 0}
+.noprom{background:var(--red-bg);border-radius:12px;padding:12px 16px;margin-top:14px;color:#6E1C1C;font-size:15px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important}
+}
+@media (max-width:520px){h1{font-size:22px}.card{padding:18px}.pip{display:none}.cc.has-ctl{padding-right:16px;padding-bottom:50px}.mood{min-width:0}.steps div{font-size:10px}.deck{min-height:320px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="brand"><span class="logo" aria-hidden="true"></span>Operadora Horizonte · Missão McAfee</div>
+    <div class="score" id="score" aria-live="polite">0 pontos</div>
+  </div>
+  <div class="steps" id="steps" role="img" aria-label="Progresso"></div>
+</header>
+<main id="app"></main>
+
+<script>
+/* ============================================================
+   CONTEÚDO (dados). O renderizador é genérico: para outro produto
+   ou cliente troca-se só este objeto e a pasta media/.
+   Vídeos: gerados com IA (Higgsfield · Seedance 2.5) a partir de uma
+   imagem de referência por personagem e falas em áudio (ElevenLabs).
+   Fonte de cada decisão = material do cliente (Operadora Horizonte).
+   ============================================================ */
+const PASS = 70;
+const MEDIA = p => (window.__M && window.__M[p]) || p;   // arquivo único injeta __M; no pacote usa a pasta media/
+const FLOW = [
+  { t: "video", k: "intro", label: "Vídeo" },
+  { t: "read",  k: "read",  label: "Leitura" },
+  { t: "sim",   k: "marta", label: "Marta" },
+  { t: "sim",   k: "jorge", label: "Seu Jorge" },
+  { t: "game",  k: "g",     label: "Caça-golpe" }
+];
+
+/* Caça-golpe: baralho com 25 cartas (golpes de 2025-2026 e mensagens legítimas parecidas).
+   Cada rodada sorteia 12: 7 golpes e 5 legítimas. "{link}" no texto vira um link que só mostra
+   o endereço real quando tocado (como segurar o dedo no link do celular). Fontes: Febraban (set/2026),
+   Banco Central (regras do Pix de fev e set/2026), Sebrae/CRC (golpes contra MEI, jun/2026),
+   Ministério da Fazenda (anúncios falsos de renegociação, ago/2026), Malwarebytes (suporte técnico, set/2026). */
+const GAMES = {
+  g: {
+    title: "Caça-golpe final", badge: "🎯", secs: 10, draw: 12, drawScam: 7,
+    intro: "Última fase: 12 mensagens sorteadas de um baralho com golpes que estão em alta em 2026, 10 segundos cada. Os golpes vêm bem disfarçados, há mensagens legítimas de propósito (algumas até com link) e os links aparecem escondidos: toque para ver o endereço real, mas o tempo continua correndo.",
+    cards: [
+      /* ---------- golpes ---------- */
+      { type: "sms", scam: true, from: "CORREIOS", time: "Hoje, 09:14",
+        text: "Seu objeto BR4471 está retido na fiscalização. Pague a taxa de R$ 7,90 até hoje para liberar a entrega: {link}",
+        link: { text: "Pagar taxa", url: "rastreio-correios.com/taxa" },
+        flags: ["O endereço real é rastreio-correios.com, que não é dos Correios", "Cobra “taxa” por link de SMS", "Urgência: “até hoje”"],
+        mcafee: "Proteção contra fraude por SMS avisa sobre links suspeitos (Premium). Se o link for aberto, a navegação segura ajuda a bloquear o site (Básico e Premium)." },
+      { type: "sms", scam: true, tag: "2026", from: "BancoAurora", time: "Hoje, 07:52",
+        text: "Pix de R$ 1.379,90 aprovado para LOJA PRIME LTDA. Não reconhece? Ligue agora para a central de segurança: 0800 591 2210.",
+        flags: ["Não tem link: o golpe é o telefone, que leva a uma falsa central", "O número certo é o do verso do cartão ou o do app, nunca o que veio na mensagem", "Susto com valor alto para você agir sem pensar"],
+        mcafee: "O alerta de SMS do Premium ajuda com links, mas aqui a isca é a ligação. Desde fevereiro de 2026, o alerta de golpe no Pix é feito direto no app do banco." },
+      { type: "call", scam: true, tag: "2026", caller: "Banco Aurora", num: "0800 591 2210",
+        ctx: "O nome e o final do cartão estão certos.",
+        text: "Sra. Marta, aqui é da segurança do Banco Aurora. Identificamos uma compra de R$ 2.390 em Manaus no cartão final 4471. Para cancelar, vou mandar um código por SMS e a senhora me confirma, tá bom?",
+        flags: ["Golpistas compram nome e final de cartão vazados: acertar isso não prova nada", "Banco nunca pede que você leia um código recebido por SMS", "O número na tela pode ser falsificado: desligue e ligue você para o número do app"],
+        mcafee: "Golpe por conversa: nenhum antivírus bloqueia uma ligação. O monitoramento de dados vazados do Premium avisa quando seus dados aparecem à venda, e por isso esse tipo de abordagem fica mais convincente." },
+      { type: "wa", scam: true, tag: "2026", name: "Carol (loja)", saved: true,
+        ctx: "É o número salvo da Carol, e a voz parece mesmo a dela.",
+        audio: "0:12", text: "Marta, tô sem bateria e o fornecedor tá aqui na porta. Faz um Pix de R$ 1.900 nessa chave que eu te explico depois?",
+        key: "5f3a9c1e-77b2-4e0d-9a41-c2d8e6b0f913",
+        flags: ["A IA clona uma voz com poucos segundos de áudio, e contas de WhatsApp também são clonadas", "Pede Pix para uma chave desconhecida, com pressa, e “explico depois”", "Confirme por outro canal: ligue para a Carol ou fale com ela na loja"],
+        mcafee: "Golpe por conversa: o antivírus não detecta voz falsa. A regra da equipe resolve: pedido de Pix fora do combinado só depois de confirmar por ligação." },
+      { type: "wa", scam: true, tag: "2026", name: "Dr. Marcelo Antunes · Advogado", num: "+55 11 9 7310-4482",
+        ctx: "Você tem mesmo um processo contra uma transportadora.",
+        text: "Sra. Marta, boa tarde. O processo nº 1012345-67.2024.8.26.0100 foi ganho e há R$ 18.430,00 liberados. Para expedir o alvará hoje, é preciso quitar R$ 1.290,00 de custas por Pix. Posso enviar a chave?",
+        flags: ["Golpistas usam dados públicos de processos reais: o número certo não prova nada", "A Justiça não cobra depósito antecipado para liberar valor", "Número desconhecido: confirme com o seu advogado pelo telefone de sempre"],
+        mcafee: "Golpe por conversa: não há link nem arquivo para bloquear. A defesa é falar com o seu advogado pelo contato que você já tem." },
+      { type: "receipt", scam: true, tag: "2026", bank: "Banco Aurora", amount: "R$ 640,00", to: "Ateliê Bela Trama", status: "Agendado para hoje, 23:50",
+        ctx: "Uma cliente quer levar as roupas agora e mostra este comprovante no celular dela.",
+        flags: ["Está escrito “agendado”: o dinheiro não caiu e o Pix pode ser cancelado até lá", "Comprovante na tela do cliente é só uma imagem (a IA já gera comprovantes perfeitos)", "Confira no seu app ou receba por QR Code dinâmico na maquininha antes de entregar"],
+        mcafee: "Nenhum antivírus vê isso: é conferência de caixa. Golpistas também pagam e depois pedem a devolução alegando golpe; desde 1º de setembro de 2026, o lojista tem 80 dias para contestar." },
+      { type: "mail", scam: true, tag: "2026", from: "Receita Federal <notificacao@receita-mei.com.br>", subject: "Notificação: DAS em atraso. CNPJ será cancelado em 48 h",
+        text: "Identificamos pendência no Simples Nacional do seu CNPJ. Regularize em até 48 horas para evitar o cancelamento e a inscrição em dívida ativa. {link}",
+        link: { text: "Emitir guia DAS", url: "gov.br.regulariza-mei.com/das" },
+        flags: ["O endereço termina em regulariza-mei.com: o “gov.br” no começo é enfeite", "Receita e Sebrae não mandam cobrança nem guia por mensagem", "Ameaça de cancelar o CNPJ em 48 h para apressar"],
+        mcafee: "A navegação segura ajuda a bloquear sites falsos que imitam o governo (Básico e Premium). A guia do DAS se emite só no gov.br ou no app do Sebrae." },
+      { type: "ad", scam: true, tag: "2026", page: "Governo Federal", sponsored: true,
+        text: "Programa Libera Brasil: limpe as dívidas do seu CNPJ com até 90% de desconto. Vagas limitadas até sexta. {link}",
+        link: { text: "Simular agora", url: "liberabrasil-gov.com/simular" },
+        flags: ["Anúncio patrocinado usando nome e logo do governo: o Ministério da Fazenda alertou sobre isso em 2026", "Renegociação de dívida é feita só no banco, não em site de anúncio", "Prazo curto e desconto alto demais"],
+        mcafee: "A navegação segura ajuda a bloquear o site falso. Lembre: 38% desses anúncios falsos foram feitos com IA, então visual caprichado não prova nada." },
+      { type: "dm", scam: true, tag: "2026", name: "Meta Business Support", handle: "@meta.business.supp0rt",
+        text: "Sua página Ateliê Bela Trama recebeu uma denúncia de violação de direitos autorais e será desativada em 24 horas. Para evitar, envie um recurso: {link}",
+        link: { text: "Enviar recurso", url: "meta-business-appeals.help/recurso" },
+        flags: ["A Meta avisa dentro do próprio app (Central de contas), não por mensagem direta", "Perfil com zero no lugar do “o”, endereço que não é da Meta", "Prazo de 24 h para você entregar login e senha"],
+        mcafee: "A navegação segura ajuda a bloquear a página falsa. O gerenciador de senhas também ajuda: ele não preenche a senha num site que não é o verdadeiro." },
+      { type: "popup", scam: true, tag: "2026", url: "alerta-seguranca-pc.online",
+        ctx: "Você pesquisava preço de tecido, clicou num resultado e a tela travou.",
+        title: "⚠ McAfee: seu computador está infectado", text: "5 vírus encontrados. Seus dados bancários estão em risco. Não desligue o computador. Ligue já para o suporte técnico: 0800 721 3390.",
+        flags: ["Alerta dentro do navegador, num site estranho, e não no aplicativo do McAfee", "Telefone de “suporte” para você ligar e liberar acesso remoto", "Medo e pressa: “não desligue”"],
+        mcafee: "O McAfee de verdade avisa pelo próprio aplicativo e nunca pede para você ligar por uma página. Feche a aba (ou o navegador) e não instale programa de acesso remoto." },
+      { type: "pixauto", scam: true, tag: "2026", payee: "Clube Vantagens PME", amount: "R$ 89,90 por mês", end: "Sem data final",
+        ctx: "Chegou logo depois de um “consultor” ligar oferecendo um brinde.",
+        flags: ["Você não pediu essa assinatura: o “brinde” era a isca", "Pix Automático cobra todo mês até você cancelar", "Empresa desconhecida e sem data final"],
+        mcafee: "Nenhum antivírus decide por você. Só autorize Pix Automático de quem você já contratou; dá para ver e cancelar as autorizações no app do banco." },
+      { type: "site", scam: true, url: "banco-aurora.com.br.seguranca-login.net/entrar", title: "Banco Aurora · Acesse sua conta",
+        ctx: "Você chegou aqui por um link recebido por mensagem.",
+        flags: ["O domínio verdadeiro é seguranca-login.net; o que vem antes é enfeite", "Pede CPF e senha depois de um link de mensagem"],
+        mcafee: "A navegação segura bloqueia ou alerta sobre sites maliciosos e endereços com erro de digitação (Básico e Premium)." },
+      { type: "wifi", scam: true, net: "CAFE_FREE_WIFI", ctx: "Você está num café e precisa enviar um pedido.",
+        flags: ["Rede aberta que pede CPF e número do cartão", "Wi-fi grátis nunca precisa de cartão"],
+        mcafee: "O Premium alerta sobre wi-fi inseguro e desconecta se detectar ataque. A VPN esconde seu endereço de IP em redes assim." },
+      { type: "mail", scam: true, from: "Tintas Arco-Íris <financeiro@tintasarcoiris-nf.com>", subject: "NF 4471 em anexo: abrir urgente",
+        text: "Prezado cliente, segue a nota fiscal referente ao seu pedido. Abra o anexo hoje para evitar multa.", attach: "NF_4471.pdf.exe",
+        flags: ["Termina em .exe: o “.pdf” no meio é disfarce, é um programa", "Domínio diferente do fornecedor que você conhece", "Urgência e ameaça de multa"],
+        mcafee: "A proteção contra ransomware e downloads maliciosos (Básico e Premium) impede que esse tipo de arquivo sequestre seus dados." },
+      { type: "mail", scam: true, from: "Suporte McAfee <atendimento@mcafee-suporte.com>", subject: "Sua licença expira hoje",
+        ctx: "Você comprou o McAfee ontem.",
+        text: "Sua licença do McAfee Premium vence hoje. Renove agora para não ficar desprotegido: {link}",
+        link: { text: "Renovar licença", url: "mcafee-suporte.com/renovar" },
+        flags: ["Você comprou ontem: a licença não vence hoje", "Endereço que imita a marca (mcafee-suporte.com)", "Usa o medo de ficar desprotegido para apressar você"],
+        mcafee: "Golpe de “renovação” é dos mais comuns de suporte falso. Confirme pela central da Horizonte, onde o pedido foi registrado. A navegação segura ajuda a bloquear o site falso." },
+      { type: "sms", scam: true, from: "Horizonte", time: "Hoje, 10:31",
+        ctx: "Você tem o app da Horizonte e paga a fatura em dia.",
+        text: "Horizonte: sua fatura de setembro está em aberto e a linha será suspensa hoje às 18h. Pague com 20% de desconto pelo Pix: {link}",
+        link: { text: "Pagar com desconto", url: "horizonte-faturas.com/pix" },
+        flags: ["Você paga em dia e a mensagem fala em suspensão hoje", "Desconto para pagar rápido por link", "O endereço real não é o da operadora"],
+        mcafee: "Proteção contra fraude por SMS avisa sobre links suspeitos (Premium). Compare com o aviso legítimo da Horizonte: ele manda abrir o app, sem link e sem desconto." },
+      /* ---------- legítimas ---------- */
+      { type: "mail", scam: false, from: "Operadora Horizonte <boas-vindas@operadorahorizonte.com.br>", subject: "Suas licenças McAfee foram entregues",
+        ctx: "Você comprou o McAfee ontem.",
+        text: "Olá! As licenças do seu pedido foram entregues ao destinatário cadastrado. Use a credencial deste e-mail para entrar no portal, baixar o aplicativo e instalar nos seus dispositivos.",
+        flags: ["Você comprou ontem e esperava esse e-mail", "Remetente é o endereço da própria operadora", "Não pede senha, cartão nem pagamento"],
+        mcafee: "Esse é o e-mail de boas-vindas do fluxo real de pós-venda: a licença é ativada no dia seguinte e a credencial chega por e-mail." },
+      { type: "mail", scam: false, from: "Operadora Horizonte <fatura@operadorahorizonte.com.br>", subject: "Sua fatura de setembro chegou",
+        ctx: "Você recebe esse e-mail todo mês, sempre no mesmo dia.",
+        text: "Olá, Marta! Sua fatura de setembro, no valor de R$ 249,90, vence dia 15. Veja os detalhes na sua conta: {link}",
+        link: { text: "Ver fatura", url: "operadorahorizonte.com.br/minha-conta" },
+        flags: ["Ter link não é, sozinho, sinal de golpe: o endereço real é o da operadora", "Chega todo mês, com o valor de sempre", "Não ameaça, não dá desconto relâmpago e não pede dado"],
+        mcafee: "Desconfiar de tudo também atrapalha. Tocar no link para ver o endereço antes de abrir é o hábito certo; aqui ele leva ao site oficial." },
+      { type: "mail", scam: false, from: "Rita (contabilidade) <rita@contabilidaderita.com.br>", subject: "Nota fiscal de setembro (como combinamos)",
+        ctx: "Rita é sua contadora e você pediu a nota ontem por telefone.",
+        text: "Oi! Segue a nota do mês em PDF, como combinamos ontem por telefone. Qualquer dúvida é só me ligar.", attach: "nota-setembro.pdf",
+        flags: ["Você estava esperando esse envio", "Contato conhecido, assunto combinado", "Anexo em PDF, formato normal de nota"],
+        mcafee: "Desconfiar de tudo também atrapalha: aqui o contexto (você pediu, a pessoa é conhecida) mostra que é legítimo." },
+      { type: "wa", scam: false, name: "Rita Contadora", saved: true,
+        ctx: "Todo mês a Rita pede as notas nesta mesma época.",
+        text: "Oi, Marta! Preciso do XML das notas de setembro até sexta para fechar a apuração. Pode mandar pro meu e-mail de sempre?",
+        flags: ["Contato salvo, pedido de rotina, na época de sempre", "Não pede dinheiro, senha nem código", "Usa um canal que vocês já combinaram (o e-mail de sempre)"],
+        mcafee: "Mensagem legítima: o pedido faz parte da rotina e não envolve pagamento nem link." },
+      { type: "sms", scam: false, from: "BancoAurora", time: "Agora",
+        ctx: "Você acabou de tentar entrar no app do banco.",
+        text: "Código de verificação: 482913. Não compartilhe com ninguém. Se não foi você, ignore.",
+        flags: ["Você pediu o código agora mesmo", "Não tem link", "Só informa o código; não pede que você o envie"],
+        mcafee: "Golpistas pedem que você envie o código. Aqui ele apenas chega e você digita no app." },
+      { type: "sms", scam: false, from: "BancoAurora", time: "Agora",
+        ctx: "Você acabou de pagar o café da equipe com o cartão.",
+        text: "Compra aprovada: R$ 89,90 em PADARIA BOM PAO, cartão final 4471. Dúvidas? Use o app Banco Aurora.",
+        flags: ["Bate com a compra que você acabou de fazer", "Não tem link nem telefone para ligar", "Manda usar o app que você já tem"],
+        mcafee: "Aviso de compra legítimo. Compare com o SMS falso que traz um 0800 para você ligar." },
+      { type: "push", scam: false, app: "Banco Aurora", time: "agora",
+        ctx: "Você acabou de pagar um fornecedor novo pelo app.",
+        title: "Pix enviado", text: "R$ 4.800,00 para Tecidos Lumi Ltda. Não reconhece? Abra o app e toque em “Contestar”.",
+        flags: ["Notificação do app oficial, sobre um Pix que você acabou de fazer", "Não tem link nem telefone", "Manda resolver dentro do app, que é o caminho certo"],
+        mcafee: "Desde fevereiro de 2026, o alerta de golpe no Pix é feito no próprio app do banco. Essa notificação é o fluxo oficial." },
+      { type: "pixauto", scam: false, payee: "Operadora Horizonte", amount: "Fatura mensal, até R$ 300,00", end: "Até você cancelar",
+        ctx: "Ontem você pediu, no app da Horizonte, para pagar a fatura por Pix Automático.",
+        flags: ["Foi você quem pediu, pelo app oficial", "Empresa que você já paga todo mês", "Tem valor máximo definido e pode ser cancelada no app do banco"],
+        mcafee: "Pix Automático é seguro quando você mesmo pediu a quem já contratou. Compare com o “Clube Vantagens” que chegou depois de uma ligação." },
+      { type: "sms", scam: false, from: "Horizonte", time: "Hoje, 08:00",
+        ctx: "Você tem o app da Horizonte e recebe este aviso todo mês.",
+        text: "Sua fatura de setembro já está disponível no app Minha Horizonte. Nenhuma ação é necessária.",
+        flags: ["Você recebe essa mensagem todo mês", "Não tem link e não pede nenhum dado", "Manda abrir o app que você já tem, e não um link"],
+        mcafee: "Nem todo aviso é golpe: dentro da sua rotina, sem link e sem pedir dados, é legítimo." }
+    ]
+  }
+};
+
+const SIMS = {
+  /* Marta: conversa ramificada. Cada opção tem qualidade q (2 ótima, 1 ok, 0 ruim), pode marcar
+     lembranças (set/unset) e mudar o caminho (go/end). A nota vem de 5 etapas (melhor resposta de
+     cada etapa; segunda chance vale no máximo 1) + o desfecho da chamada (0 a 2). */
+  "marta": {
+    "branch": true,
+    "badge": "📞",
+    "title": "Venda o McAfee Premium para a Marta",
+    "blurb": "Você é Gerente de Negócio e conduz uma videochamada. Cada resposta muda o rumo: a Marta lembra do que você prometeu, pode encerrar a chamada se perder a confiança e a conversa tem vários finais.",
+    "poster": "media/marta.jpg",
+    "display": "Marta Souza · Ateliê Bela Trama",
+    "who": "da Marta",
+    "cancelLine": "Ela pediu o cancelamento na central e ainda pagou multa. A venda virou reclamação.",
+    "person": {
+      "name": "Marta Souza",
+      "short": "Marta",
+      "role": "Dona do Ateliê Bela Trama (loja de roupas, física e online)",
+      "facts": [
+        "7 pessoas na equipe, contando com ela. Cada uma trabalha com 1 notebook e 1 celular.",
+        "Já é cliente da Horizonte: linha móvel e banda larga.",
+        "Não é da área de TI. Usa WhatsApp, e-mail e maquininha no dia a dia.",
+        "Tem 10 minutos para a videochamada."
+      ]
+    },
+    "reactions": {
+      "0": "media/reacao_preocupada.mp4",
+      "1": "media/reacao_hmm.mp4",
+      "2": "media/reacao_ok.mp4"
+    },
+    "stages": ["Abertura", "Traduzir", "Objeção do Básico", "Pacote", "Fechamento"],
+    "max": 12,
+    "start": "abertura",
+    "scenes": {
+      "abertura": {
+        "stage": 1, "title": "Abertura", "clip": "media/fala1.mp4",
+        "ctx": "A videochamada acabou de começar.",
+        "client": "Oi! Tenho só uns dez minutinhos, viu? Do que se trata?",
+        "prompt": "Como você abre a conversa?",
+        "options": [
+          { "q": 2, "set": ["dor"], "go": "traducao",
+            "text": "“Prometo caber nos dez minutos. Antes de falar de produto, me conta: já rolou algum susto com golpe ou vírus aí na loja?”",
+            "reply": "Ih, rolou sim! Semana passada a Carol clicou num e-mail dos Correios e o computador ficou esquisito…",
+            "why": "Respeita o tempo dela e faz uma pergunta aberta sobre a experiência da loja antes de falar de produto. Ela conta o problema e você ganha o melhor argumento da conversa: a história dela, nas palavras dela." },
+          { "q": 1, "go": "sondagem",
+            "text": "“É sobre a segurança digital da loja. Hoje vocês usam algum antivírus nos computadores e celulares, ou ainda não?”",
+            "reply": "Acho que não… mas nunca deu problema sério, não.",
+            "why": "O tema é certo, mas a pergunta é de sim ou não, e a resposta dela encerra o assunto. Uma pergunta aberta sobre a rotina ou sobre sustos faz o cliente contar a história." },
+          { "q": 1, "go": "sondagem",
+            "text": "“Marta, 75% dos incidentes digitais acontecem em pequenos negócios como o seu. A sua loja está protegida hoje?”",
+            "reply": "75%? Hum… acho que sim, né? Nunca deu problema sério.",
+            "why": "O dado é real (relatório Sophos 2024, citado no material) e chama atenção, mas a pergunta final é fechada e soa como pressão. Ela responde “acho que sim” e você não descobre nada." },
+          { "q": 1, "go": "sondagem",
+            "text": "“Serei breve: é o McAfee Premium, que protege os computadores e celulares da loja contra vírus e golpes. Posso te mostrar como funciona?”",
+            "reply": "Hum, tá… mas eu nem sei se preciso disso.",
+            "why": "Educado e objetivo, mas é oferta antes da descoberta: você ainda não sabe se ela tem alguma dor, e ela responde com dúvida." },
+          { "q": 0, "go": "sondagem",
+            "text": "“Vou ser sincero, Marta: do jeito que está, a loja pode perder tudo amanhã. Um ataque desses fecha pequeno negócio. Posso te ajudar a evitar isso?”",
+            "reply": "Nossa, perder tudo? Você tá me assustando…",
+            "why": "Medo exagerado e sem base: você ainda não sabe nada da loja dela. Assustar o cliente gera desconfiança, não venda." },
+          { "q": 0, "set": ["desconto"], "go": "sondagem", "memo": "A Marta guardou a “condição especial”. Ela vai perguntar por ela mais tarde.",
+            "text": "“Hoje temos uma condição especial no McAfee Premium, a partir de R$ 9,99 por mês. Posso já te mandar a proposta?”",
+            "reply": "Condição especial? Hum… mas eu nem sei se preciso disso.",
+            "why": "Preço e proposta antes de entender a dor. E “condição especial” não existe no material: é uma promessa inventada para empurrar, e ela vai cobrar." }
+        ],
+        "best": "Pergunte antes de explicar: uma pergunta aberta sobre a rotina e sobre sustos recentes.",
+        "src": "Playbook: perguntas de levantamento de oportunidade"
+      },
+      "sondagem": {
+        "stage": 1, "retry": true, "title": "Abertura", "mood": 1,
+        "ctx": "Ela não viu motivo para continuar. Você tem mais uma chance de descobrir o que importa para ela.",
+        "client": [
+          { "if": "desconto", "text": "Olha, nem sei se essa condição especial me interessa. Sendo sincera, a gente nunca teve problema sério aqui. Por que eu precisaria disso?" },
+          { "text": "Olha, sendo sincera: a gente nunca teve problema sério aqui. Por que eu precisaria disso?" }
+        ],
+        "prompt": "Como você retoma?",
+        "options": [
+          { "q": 2, "pts": 1, "set": ["dor"], "go": "traducao",
+            "text": "“Justo. Me conta como é o dia a dia: a equipe recebe muito SMS, e-mail ou WhatsApp pedindo pagamento ou clique em link?”",
+            "reply": "Todo dia! Aliás… semana passada a Carol clicou num e-mail dos Correios e o computador ficou esquisito.",
+            "why": "Boa recuperação: em vez de insistir no produto, você voltou a perguntar sobre a rotina e ela mesma lembrou do susto. Vale 1 ponto nesta etapa, porque a pergunta certa era a primeira." },
+          { "q": 1, "go": "traducao_fria",
+            "text": "“Porque ninguém espera o problema. É como seguro de carro: a gente contrata antes de bater, não depois. Com a loja é igual.”",
+            "reply": "Tá, mas seguro de carro eu sei pra que serve. Isso aqui eu ainda não sei.",
+            "why": "A analogia não é ruim, mas chega cedo: ela ainda não contou nenhuma dor, então soa como argumento pronto. Faltou perguntar." },
+          { "q": 0, "go": "traducao_fria",
+            "text": "“Todo negócio precisa, Marta. Hoje em dia quem não tem antivírus está praticamente pedindo para ter problema.”",
+            "reply": "Hum… isso todo vendedor fala.",
+            "why": "Generalidade sem prova e com tom de bronca. Cliente desconfiado ouve isso todo dia e se fecha." },
+          { "q": 0, "if": "desconto", "set": ["desconto"], "go": "traducao_fria", "memo": "Agora a “condição especial” tem até prazo. Ela vai lembrar.",
+            "text": "“Porque a condição especial é só até sexta. Vale garantir agora e pensar nos detalhes depois.”",
+            "reply": "Até sexta? Tô me sentindo pressionada…",
+            "why": "Dobra a aposta numa condição que não existe e usa urgência falsa. É a mesma tática do golpista: pressa para a pessoa não pensar." },
+          { "q": 0, "if": "!desconto", "go": "traducao_fria",
+            "text": "“Porque a maioria só descobre que precisava depois que perde tudo. Melhor não arriscar, né?”",
+            "reply": "Credo… você tá me assustando.",
+            "why": "Medo no lugar de pergunta. Ela não contou nada da loja e você já prevê uma tragédia: soa como pressão." }
+        ],
+        "best": "Volte a perguntar sobre a rotina: “a equipe recebe SMS, e-mail ou WhatsApp pedindo pagamento ou clique?”",
+        "src": "Playbook: perguntas de levantamento de oportunidade"
+      },
+      "traducao": {
+        "stage": 2, "title": "Traduzir", "clip": "media/fala2.mp4",
+        "ctx": "A Marta conta o que aconteceu e pede uma explicação simples.",
+        "client": "A Carol clicou num link falso dos Correios e o computador ficou lento. Fiquei com medo de perder o cadastro das clientes. O que esse McAfee faz, exatamente? Explica sem papo de TI, por favor.",
+        "prompt": "O que você responde?",
+        "options": [
+          { "q": 2, "go": "objecao",
+            "text": "“Pensa num porteiro que confere tudo o que tenta entrar nos computadores e celulares. Naquele link falso dos Correios, ele avisaria que era golpe antes de a Carol digitar qualquer dado.”",
+            "reply": "Nossa, então ele teria avisado naquele link! Isso eu entendi.",
+            "why": "Analogia simples, ligada ao caso real da Marta e sem termos técnicos. Repare no verbo: “avisaria”, e não “barraria sempre”. O certo é reduzir muito o risco, sem prometer 100%." },
+          { "q": 2, "go": "objecao",
+            "text": "“Ele confere links, sites e arquivos antes de abrirem e avisa quando parece golpe. No caso da Carol, daria o alerta no link. O que ele não impede é alguém passar dados numa conversa.”",
+            "reply": "Ah, então ajuda no link, mas a equipe ainda tem que ficar esperta. Justo.",
+            "why": "Concreto, ligado ao caso dela e honesto sobre o limite do produto. Dizer o que ele não faz aumenta a confiança no que ele faz." },
+          { "q": 1, "go": "objecao",
+            "text": "“Ele faz proteção em tempo real contra vírus, ransomware e phishing, com firewall e atualizações automáticas, rodando em segundo plano sem pesar nos aparelhos da loja.”",
+            "reply": "Certo… mas o que é ransomware, mesmo?",
+            "why": "Tudo correto, mas é a frase do argumentário. A Marta pediu “sem papo de TI” e recebeu quatro termos técnicos." },
+          { "q": 1, "go": "objecao",
+            "text": "“É um programa que barra vírus e sites falsos nos aparelhos da loja. Funciona como um seguro: você não vê, mas ele trabalha o tempo todo por você.”",
+            "reply": "Tá, entendi o geral. Mas como isso teria ajudado a Carol?",
+            "why": "Linguagem simples, mas genérica: não conecta ao caso que ela acabou de contar. A analogia certa usa a história dela." },
+          { "q": 0, "dt": 0, "set": ["p100"], "go": "objecao", "memo": "Você prometeu que a Carol “nunca mais cai”. A Marta guardou isso.",
+            "text": "“É simples: a McAfee protege tudo automaticamente. Com ele instalado, a Carol nunca mais cai num golpe desses, e você ganha tempo para cuidar do resto da loja.”",
+            "reply": "Sério? Então a Carol nunca mais vai ter problema?",
+            "why": "Soa confiante, mas promete 100%. Nenhum antivírus garante isso, e se algo acontecer vira reclamação ou cancelamento. Ela vai querer confirmar essa promessa antes de fechar." },
+          { "q": 0, "set": ["p100"], "go": "objecao", "memo": "Ficou no ar que, com o McAfee, “isso não se repete”. A Marta guardou isso.",
+            "text": "“Ali o problema foi mais a Carol, né? Com um treinamento rápido e o McAfee instalado, isso não se repete na loja.”",
+            "reply": "Ah, a Carol é ótima… foi um e-mail bem feito.",
+            "why": "Culpa uma funcionária de confiança dela e ainda insinua garantia. Golpe bem feito engana qualquer um: o produto reduz o risco, não zera." }
+        ],
+        "best": "Use uma analogia do dia a dia ligada ao caso dela (“um porteiro que confere tudo o que tenta entrar”) e não prometa 100%.",
+        "src": "Material de produto, p. 6 (funcionalidades) · Argumentário: proteção em tempo real"
+      },
+      "traducao_fria": {
+        "stage": 2, "title": "Traduzir", "mood": 1,
+        "ctx": "Você ainda não sabe se a loja teve algum problema.",
+        "client": "Tá. Mas me explica sem papo de TI: o que esse McAfee faz, exatamente?",
+        "prompt": "O que você responde?",
+        "options": [
+          { "q": 2, "set": ["dor"], "go": "objecao",
+            "text": "“Pensa num porteiro que confere tudo o que tenta entrar nos computadores e celulares: link falso, site falso, arquivo com vírus. Quando parece golpe, ele avisa antes de alguém digitar algum dado.”",
+            "reply": "Ah, tipo aquele e-mail dos Correios que a Carol abriu semana passada? Isso eu entendi.",
+            "why": "Analogia simples e honesta (“avisa”, e não “garante”). Com exemplos do dia a dia, ela mesma lembrou do caso da loja: agora você sabe qual é a dor dela." },
+          { "q": 1, "go": "objecao",
+            "text": "“Ele faz proteção em tempo real contra vírus, ransomware e phishing, com firewall e atualizações automáticas, rodando em segundo plano.”",
+            "reply": "Certo… mas o que é phishing, mesmo?",
+            "why": "Correto, mas ela pediu “sem papo de TI” e recebeu jargão." },
+          { "q": 1, "go": "objecao",
+            "text": "“Na prática, é o antivírus que já vem no Básico da banda larga, só que bem mais completo e com mais recursos.”",
+            "reply": "Ué, então o Básico já resolve?",
+            "why": "Compara antes de explicar e puxa a objeção do Básico sem ter mostrado valor nenhum." },
+          { "q": 0, "dt": 0, "set": ["p100"], "go": "objecao", "memo": "Você prometeu proteção total. A Marta guardou isso.",
+            "text": "“Ele blinda a loja: com o McAfee instalado, nenhum golpe ou vírus passa. É proteção total, 24 horas.”",
+            "reply": "Nenhum? Nossa, então é garantido?",
+            "why": "Promessa de 100% que nenhum antivírus cumpre. Ela vai querer confirmar isso antes de fechar." }
+        ],
+        "best": "Use uma analogia do dia a dia com exemplos concretos (link, site, arquivo) e diga “avisa”, não “garante”.",
+        "src": "Material de produto, p. 6 (funcionalidades)"
+      },
+      "objecao": {
+        "stage": 3, "title": "Objeção do Básico", "clip": "media/fala3.mp4",
+        "ctx": "A Marta já viu a novidade da banda larga.",
+        "client": "Mas a Horizonte disse que, a partir de novembro, a banda larga já vem com antivírus. Então por que eu pagaria pelo Premium?",
+        "prompt": "Como você responde?",
+        "options": [
+          { "q": 2, "go": "pacote",
+            "text": "“O Básico cobre o essencial, você está certa. O Premium acrescenta alerta de golpe por SMS, wi-fi inseguro, VPN e aviso de dados vazados. Vale se vocês recebem esse tipo de golpe.”",
+            "reply": "Ah, o SMS eu recebo todo dia. Faz sentido!",
+            "why": "Reconhece o Básico sem diminuí-lo, diz exatamente o que o Premium acrescenta e deixa o critério de decisão claro para a cliente." },
+          { "q": 1, "go": "pacote",
+            "text": "“O Premium protege também a sua identidade: CPF, cartão e até dados vazados na dark web. O Básico só monitora o e-mail.”",
+            "reply": "Hum, isso de CPF me interessa. Tá, e quanto fica?",
+            "why": "Correto e específico, mas é um item só e não pergunta o que pesa no dia a dia dela. O SMS de golpe, que ela recebe todo dia, ficou de fora." },
+          { "q": 1, "go": "objecao_det",
+            "text": "“O Premium é mais completo que o Básico, com muito mais recursos de proteção. Para uma loja com equipe e clientes como a sua, compensa e traz mais tranquilidade.”",
+            "reply": "Mais recursos tipo o quê?",
+            "why": "É verdade, mas vago. A cliente não sabe o que muda na vida dela, e você vai ter que explicar de qualquer forma." },
+          { "q": 1, "go": "recuperar",
+            "text": "“Sem problema, Marta. Começa pelo Básico que já vem no plano e, se sentir falta de algo, me chama que eu explico o Premium sem compromisso.”",
+            "reply": "Tá bom, vou ficar com o Básico então.",
+            "why": "Honesto e gentil, mas você desistiu antes de perguntar sobre o dia a dia dela. Talvez o Premium fizesse sentido e ela nunca vai saber." },
+          { "q": 0, "set": ["desvalorizou"], "go": "objecao_det",
+            "text": "“O Básico é só uma versão de vitrine que vem de brinde e não protege contra nada sério. O que protege a loja de verdade é o Premium, pode acreditar.”",
+            "reply": "Então por que estão me dando um que não serve?",
+            "why": "Desvaloriza o produto da própria empresa e está errado: o Básico protege contra vírus, ransomware e phishing. Ela perde a confiança em você e na Horizonte." },
+          { "q": 0, "dt": 0, "go": "pacote",
+            "text": "“O Básico costuma deixar os computadores mais lentos. O Premium é mais leve e roda melhor, por isso compensa para uma loja.”",
+            "reply": "Sério? Ninguém tinha me falado isso…",
+            "why": "Inventado: o material não compara desempenho. Afirmação sem base derruba sua credibilidade no dia em que ela perguntar ao suporte." }
+        ],
+        "best": "Reconheça o Básico e mostre só o que o Premium acrescenta: identidade completa e dark web, alerta de SMS, wi-fi, VPN, filtro de conteúdo e Protection Score.",
+        "src": "Material de produto, p. 4 e 6 (Básico × Premium)"
+      },
+      "objecao_det": {
+        "stage": 3, "retry": true, "title": "Objeção do Básico", "mood": 1,
+        "ctx": "Ela quer entender a diferença antes de seguir.",
+        "client": [
+          { "if": "desvalorizou", "text": "Espera aí: se o Básico não serve, por que a Horizonte vai me dar? Me explica direito o que o Premium tem a mais." },
+          { "text": "Me fala na prática: o que o Premium faz que o Básico não faz?" }
+        ],
+        "prompt": "Como você explica a diferença?",
+        "options": [
+          { "q": 2, "pts": 1, "go": "pacote",
+            "text": "“O Básico protege o aparelho contra vírus e sites falsos. O Premium soma alerta de SMS de golpe, aviso de wi-fi inseguro, VPN e monitoramento de CPF e cartão. Vocês recebem SMS assim?”",
+            "reply": "Todo dia! Tá, isso faz diferença. Quanto fica?",
+            "why": "Boa recuperação: diferença clara, sem desmerecer o Básico, e terminando com uma pergunta sobre a rotina dela. Vale 1 ponto nesta etapa, porque isso já podia ter vindo na primeira resposta." },
+          { "q": 1, "go": "pacote",
+            "text": "“Proteção de identidade completa, monitoramento da dark web, alerta de fraude por SMS, wi-fi, VPN, filtro de conteúdo e Protection Score.”",
+            "reply": "É coisa pra caramba… tá, vamos ver o preço.",
+            "why": "A lista está certa, mas é só uma lista. Nada ligado ao dia a dia da loja, e ela segue sem saber qual item importa." },
+          { "q": 0, "go": "recuperar",
+            "text": "“Pode confiar: é muito mais seguro. A maioria dos clientes que experimentam o Premium nem pensa em voltar para o Básico.”",
+            "reply": "Isso você tá dizendo, né… acho que vou ficar com o Básico.",
+            "why": "Dado inventado (“a maioria dos clientes”) no lugar da explicação que ela pediu. Ela perde o interesse." }
+        ],
+        "best": "Diga o que cada um faz, sem desmerecer o Básico, e pergunte qual risco aparece na rotina dela.",
+        "src": "Material de produto, p. 4 e 6 (Básico × Premium)"
+      },
+      "recuperar": {
+        "stage": 3, "retry": true, "title": "Última chance", "mood": 1,
+        "ctx": "Ela está prestes a encerrar a chamada com o Básico.",
+        "client": "Olha, acho que vou ficar só com o Básico mesmo, tá? Obrigada pela ligação.",
+        "prompt": "O que você faz?",
+        "options": [
+          { "q": 2, "pts": 1, "go": "pacote",
+            "text": "“Combinado, o Básico já protege bem. Só uma pergunta antes: vocês recebem SMS de golpe ou usam wi-fi de fora, numa feira ou na casa de cliente? Isso o Básico não cobre.”",
+            "reply": "Recebo SMS de golpe todo dia… e a gente vende em feira. Tá, me fala o preço.",
+            "why": "Respeita a decisão e faz a pergunta que faltou. Ela mesma descobre que precisa. Vale 1 ponto nesta etapa: era melhor ter perguntado antes." },
+          { "q": 1, "end": "basico",
+            "text": "“Tudo bem, Marta! Fica com o Básico e, se sentir falta de algo, é só me chamar.”",
+            "reply": "Obrigada pela atenção! Até mais.",
+            "why": "Educado e honesto, mas você encerra sem saber se ela precisava do Premium. A chamada acaba aqui." },
+          { "q": 0, "dt": 0, "set": ["desconto"], "go": "pacote", "memo": "Você inventou uma “condição especial” para segurar a venda. Ela vai lembrar.",
+            "text": "“Espera! Se você fechar agora, eu consigo uma condição especial só para hoje. Vale a pena ouvir o preço.”",
+            "reply": "Condição especial? Tá… me fala quanto fica, então.",
+            "why": "Funciona agora, mas é um desconto que não existe. Ela vai perguntar por ele antes de fechar." },
+          { "q": 0, "end": "irritada",
+            "text": "“Tudo bem. Mas se acontecer alguma coisa com a loja, lembra que eu te ofereci a proteção, tá?”",
+            "reply": "Nossa… tá bom. Obrigada. Tchau.",
+            "why": "Soa como ameaça. A cliente encerra a chamada chateada, e a porta fecha até para conversas futuras." }
+        ],
+        "best": "Respeite a decisão e faça a pergunta que faltou: SMS de golpe, wi-fi fora da loja, dados de cliente.",
+        "src": "Material de produto, p. 4 e 6 (Básico × Premium)"
+      },
+      "pacote": {
+        "stage": 4, "title": "Pacote", "clip": "media/fala4.mp4",
+        "ctx": "A Marta topou avançar e quer saber o preço.",
+        "client": "Somos sete pessoas, contando comigo, e cada uma usa um notebook e um celular pra trabalhar. Quanto fica por mês?",
+        "prompt": "Qual combinação você propõe?",
+        "aid": "<b>Preços de prateleira por mês</b><table><tr><td>Premium 1 dispositivo</td><td><b>R$ 9,99</b></td></tr><tr><td>Premium 5 dispositivos</td><td><b>R$ 19,99</b></td></tr><tr><td>Premium 10 dispositivos</td><td><b>R$ 35,99</b></td></tr></table>Regra de venda: pode vender quantas licenças quiser, de qualquer plano, para a mesma linha móvel. Conte os aparelhos antes.",
+        "next": [{ "if": "desconto", "go": "cobra_desc" }, { "if": "p100", "go": "cobra_100" }, { "go": "fechamento" }],
+        "options": [
+          { "q": 2,
+            "text": "1 licença de 10 + 1 de 5 dispositivos: <b>R$ 55,98/mês</b> (15 aparelhos cobertos)",
+            "reply": "Bem menos do que eu imaginava. Fechado nesse!",
+            "why": "São 14 aparelhos (7 pessoas × 2). Menor custo que cobre todos: 35,99 + 19,99 = R$ 55,98, cerca de R$ 4 por aparelho." },
+          { "q": 1, "set": ["caro"],
+            "text": "3 licenças de 5 dispositivos: <b>R$ 59,97/mês</b> (15 aparelhos cobertos)",
+            "reply": "Tá, parece razoável.",
+            "why": "Cobre os 14 aparelhos, mas custa R$ 3,99 a mais por mês que 10 + 5. Diferença pequena, mas ela pode descobrir depois." },
+          { "q": 0, "set": ["caro"],
+            "text": "1 licença de 10 + 4 licenças de 1 dispositivo: <b>R$ 75,95/mês</b> (14 aparelhos, sem sobra)",
+            "reply": "Hum, tá… é isso mesmo?",
+            "why": "Cobrir “exatamente 14” parece preciso, mas a licença de 1 aparelho é a mais cara por unidade. Sai R$ 19,97 a mais por mês que 10 + 5, que ainda sobra uma vaga." },
+          { "q": 0, "set": ["caro"],
+            "text": "2 licenças de 10 dispositivos: <b>R$ 71,98/mês</b> (20 aparelhos, com folga para crescer)",
+            "reply": "Hmm… mas eu não preciso de 20 aparelhos.",
+            "why": "Paga por 20 aparelhos quando ela tem 14: R$ 16 a mais por mês que o ideal, por uma folga que ela não pediu." },
+          { "q": 0, "dt": 4, "set": ["faltou"],
+            "text": "1 licença de 10 dispositivos + 1 de 1 dispositivo: <b>R$ 45,98/mês</b> (cobre a equipe toda)",
+            "reply": "Ah, ótimo, bem em conta!",
+            "why": "Parece mais barato e ela nem percebeu, mas são 11 vagas para 14 aparelhos: 3 ficam sem proteção. Sempre conte os aparelhos (7 pessoas × 2)." },
+          { "q": 0, "set": ["caro"],
+            "text": "14 licenças de 1 dispositivo: <b>R$ 139,86/mês</b> (uma por aparelho)",
+            "reply": "Hmm, quase R$ 140 por mês? É bastante…",
+            "why": "Funciona, mas custa 2,5 vezes mais que a melhor combinação. Quanto maior o plano, menor o custo por aparelho: R$ 9,99, R$ 4,00 e R$ 3,60." }
+        ],
+        "best": "14 aparelhos: 1 licença de 10 + 1 de 5 = R$ 55,98/mês. Combine planos para cobrir todos pelo menor custo.",
+        "src": "Material de produto, p. 7 (planos e preços e regra de venda)"
+      },
+      "cobra_desc": {
+        "title": "Ela lembrou", "mood": 1,
+        "ctx": "Ela lembrou da “condição especial” que você citou antes.",
+        "client": "E aquela condição especial que você falou? Já está nesse valor ou ainda tem desconto em cima?",
+        "prompt": "O que você responde?",
+        "next": [{ "if": "p100", "go": "cobra_100" }, { "go": "fechamento" }],
+        "options": [
+          { "q": 2, "dt": -4, "unset": ["desconto"],
+            "text": "“Me expressei mal e prefiro corrigir agora: não existe condição especial. Esse é o preço de prateleira, e é a combinação mais barata para os seus aparelhos.”",
+            "reply": "Hum… tá. Pelo menos você foi honesto.",
+            "why": "Corrigir custa um pouco de confiança agora, mas evita uma reclamação depois. É a única saída que não vira problema na fatura." },
+          { "q": 0, "dt": 4, "set": ["mentiu_desc"],
+            "text": "“Já está aplicada nesse valor, por isso ficou tão em conta para você.”",
+            "reply": "Ah, que bom! Então fica assim.",
+            "why": "Mentira que parece pequena e deixa a cliente feliz agora. Quando ela comparar com o preço no site, vai ver que é o mesmo." },
+          { "q": 0, "dt": 4, "set": ["mentiu_desc"],
+            "text": "“Vou ver com a coordenação quanto consigo tirar e te mando o valor final pelo WhatsApp ainda hoje.”",
+            "reply": "Combinado, fico esperando então.",
+            "why": "Empurra para depois um desconto que não existe. Ela vai esperar uma mensagem que nunca vai chegar." }
+        ],
+        "best": "Corrija na hora: não há condição especial, só o preço de prateleira.",
+        "src": "Material de produto, p. 7 (só preços de prateleira, sem política de desconto)"
+      },
+      "cobra_100": {
+        "title": "Ela lembrou", "mood": 1,
+        "ctx": "Antes de fechar, ela volta numa coisa que você prometeu.",
+        "client": "Só pra eu ter certeza antes de fechar: você disse que, com ele, isso não acontece mais. É garantido? Posso contar com isso?",
+        "prompt": "O que você responde?",
+        "next": "fechamento",
+        "options": [
+          { "q": 2, "dt": -4, "unset": ["p100"],
+            "text": "“Vou corrigir o que eu disse: nenhum antivírus garante 100%. Ele avisa e bloqueia boa parte dos links e sites falsos, mas golpe por conversa ainda pede cuidado da equipe.”",
+            "reply": "Prefiro assim. Melhor saber agora do que depois.",
+            "why": "Corrigir a promessa custa um pouco agora e salva a venda depois. A cliente passa a confiar no que você diz." },
+          { "q": 1, "unset": ["p100"],
+            "text": "“Garantido ninguém pode dizer, mas com ele instalado fica muito difícil acontecer de novo na loja.”",
+            "reply": "Muito difícil… mas pode acontecer, então.",
+            "why": "Recua da garantia, mas sem explicar o limite: golpe por conversa (WhatsApp, telefone) passa por qualquer antivírus. Faltou dar à equipe o cuidado que cabe a ela." },
+          { "q": 0, "dt": 4, "set": ["mentiu_100"],
+            "text": "“Pode contar, é garantido. E se acontecer alguma coisa, a McAfee resolve para você.”",
+            "reply": "Ótimo, então fico tranquila.",
+            "why": "Confirma uma promessa impossível. Na primeira vez que alguém cair num golpe por conversa, a promessa vira reclamação." }
+        ],
+        "best": "Corrija na hora: o produto reduz muito o risco, mas não garante 100%.",
+        "src": "Material de produto, p. 6 · Lista do que não prometer"
+      },
+      "fechamento": {
+        "stage": 5, "title": "Fechamento", "clip": "media/fala5.mp4",
+        "ctx": "Ela aceitou. Agora vêm as expectativas.",
+        "client": "Perfeito! Dá pra instalar ainda hoje? E eu queria ver num painel quem instalou em cada aparelho, e mandar um relatório de conformidade com a LGPD pro meu contador.",
+        "prompt": "O que você responde?",
+        "next": "$fim",
+        "options": [
+          { "q": 2,
+            "text": "“Registro o pedido hoje e a McAfee ativa a licença no dia seguinte, depois da análise de crédito. O painel de gestão ainda está em desenvolvimento, e não há relatório de LGPD.”",
+            "reply": "Ok, prefiro saber agora. Fico no aguardo do e-mail.",
+            "why": "Dá o prazo real e diz com clareza o que o produto ainda não faz. A cliente decide com as informações certas." },
+          { "q": 1,
+            "text": "“Hoje não dá: a ativação é no dia seguinte, depois da análise de crédito e fraude. Sobre o painel e o relatório de LGPD, vou confirmar com a equipe e te retorno.”",
+            "reply": "Tá… e o painel? Você me avisa então.",
+            "why": "Corrige o prazo e não inventa nada, mas essas respostas já estão no material (painel em desenvolvimento, sem relatório). “Vou confirmar” deixa a dúvida aberta sem necessidade." },
+          { "q": 1,
+            "text": "“A licença ativa no dia seguinte, depois da análise. Para acompanhar, o Protection Score mostra a nota de segurança e as recomendações de cada aparelho.”",
+            "reply": "Ah, então dá pra ver tudo por ali? Ótimo.",
+            "why": "O prazo está certo, mas a resposta troca o pedido dela por outra coisa: o Protection Score dá nota e dicas para quem usa o aparelho. Não é painel de gestão nem relatório de LGPD, e ela entendeu que era." },
+          { "q": 0, "dt": 4, "set": ["mentiu_fech"],
+            "text": "“Consigo dar um jeito de instalar hoje mesmo. O painel de gestão sai em breve, e o McAfee ajuda bastante com a LGPD, seu contador vai gostar.”",
+            "reply": "Que ótimo! Vou contar pro meu contador.",
+            "why": "Três problemas: “dar um jeito” não existe (a ativação é no dia seguinte), “sai em breve” é data inventada e o produto não emite relatório de LGPD." },
+          { "q": 0, "dt": 4, "set": ["mentiu_fech"],
+            "text": "“Claro! A ativação é automática e você já instala hoje mesmo. No portal você vê quem instalou em cada aparelho e baixa o relatório de LGPD para o contador.”",
+            "reply": "Perfeito! Vou avisar a equipe pra instalar hoje.",
+            "why": "Três promessas que o produto não sustenta: a ativação só ocorre no dia seguinte, o portal de gestão está em desenvolvimento e não há relatório de LGPD." }
+        ],
+        "best": "Explique o passo a passo real (análise, ativação no dia seguinte, e-mail com credencial, portal) e diga o que ainda não existe.",
+        "src": "Material de produto, p. 6 (portal em desenvolvimento) e p. 8 a 10 (pós-venda) · Atenção: o playbook promete relatórios de conformidade, o que o material de produto não confirma"
+      }
+    },
+    /* desfechos: o "$fim" escolhe um deles pelo que ficou na memória da Marta e pela confiança */
+    "ends": {
+      "desligou": { "pts": 0, "mood": 0, "icon": "📵", "title": "A Marta encerrou a chamada",
+        "line": "Olha, desculpa, mas preciso voltar pra loja. Me manda tudo por e-mail que eu vejo depois.",
+        "epi": ["O e-mail ficou sem resposta. Quando a confiança cai demais, o cliente encerra com educação e não volta."] },
+      "irritada": { "pts": 0, "mood": 0, "icon": "📵", "title": "Ela desligou chateada",
+        "line": "Nossa… tá bom. Obrigada. Tchau.",
+        "epi": ["Soou como ameaça. Na próxima ligação da Horizonte, ela não atendeu."] },
+      "basico": { "pts": 1, "mood": 1, "icon": "📘", "title": "Ficou só com o Básico",
+        "line": "Obrigada pela atenção! Se precisar, eu te chamo.",
+        "epi": ["Um mês depois, chegou um SMS falso de banco para a equipe e ninguém recebeu alerta: o aviso de fraude por SMS é do Premium. Ela não errou. Só ninguém perguntou o que ela precisava."] },
+      "cancelou": { "pts": 0, "mood": 0, "icon": "📉", "title": "Fechou… e cancelou",
+        "line": "Perfeito, pode mandar o pedido!",
+        "epi": [] },
+      "faltou": { "pts": 1, "mood": 1, "icon": "⚠️", "title": "Fechou, mas 3 aparelhos ficaram de fora",
+        "line": "Fechado! Vou avisar a equipe.",
+        "epi": ["No mês seguinte, o celular de uma vendedora, um dos 3 sem licença, abriu um link de golpe. A Marta ligou na central perguntando por que aquele aparelho não estava protegido."] },
+      "caro": { "pts": 1, "mood": 1, "icon": "💸", "title": "Fechou, mas pagando a mais",
+        "line": "Fechado!",
+        "epi": ["Dois meses depois, ela viu que 10 + 5 aparelhos saía mais barato e ligou na central pedindo a troca. Ficou a sensação de que você não pensou no bolso dela."] },
+      "morno": { "pts": 1, "mood": 1, "icon": "🤝", "title": "Fechou, com o pé atrás",
+        "line": "Tá, pode mandar. Vou conferir tudo com calma.",
+        "epi": ["Ela fechou, mas pediu tudo por escrito e não indicou você para ninguém. A venda saiu; a confiança, não."] },
+      "indicou": { "pts": 2, "mood": 2, "icon": "🌟", "title": "Fechou e indicou você",
+        "line": "Gostei de conversar com você. Pode mandar o pedido!",
+        "epi": ["No dia seguinte, a licença ativou como você disse. Uma semana depois, a Marta passou o seu contato para a dona da loja ao lado."] }
+    },
+    "lies": {
+      "mentiu_desc": "O desconto prometido nunca apareceu na fatura.",
+      "mentiu_100": "Um funcionário caiu num golpe por WhatsApp, e ela lembrou que você tinha garantido que isso não acontecia.",
+      "mentiu_fech": "A licença só ativou no dia seguinte, e não havia painel nem relatório de LGPD para o contador."
+    },
+    finale(f, t) {
+      const lies = Object.keys(this.lies).filter(x => f.has(x));
+      if (lies.length) return "cancelou";
+      if (f.has("faltou")) return "faltou";
+      if (f.has("caro")) return "caro";
+      return t >= 72 ? "indicou" : "morno";
+    }
+  },
+  /* Seu Jorge: vídeo interativo ramificado. Toda fala dele é um clipe (media/jorge2_*.mp4, voz gravada
+     antes no ElevenLabs). Cenas "still" não têm clipe novo: ele acabou de falar na resposta anterior.
+     Nota: 4 etapas × 2 + desfecho 2 = 10. Ele é desconfiado: a confiança começa em 40. */
+  "jorge": {
+    "branch": true,
+    "badge": "🔧",
+    "title": "Vídeo interativo: Seu Jorge, da oficina",
+    "blurb": "Agora é um vídeo interativo. Assista ao que aconteceu com o Seu Jorge e atenda a chamada: cada resposta sua muda o que ele diz, em vídeo. Ele é desconfiado, lembra do que você prometeu e desliga se perder a paciência.",
+    "poster": "media/jorge.jpg",
+    "display": "Seu Jorge · Oficina Jorge Auto Center",
+    "who": "do Seu Jorge",
+    "cancelLine": "Ele pediu o cancelamento na central e ainda pagou multa. A venda virou reclamação.",
+    "trust0": 40,
+    "trust": { "2": 22, "1": -8, "0": -22 },   // cético: resposta morna também irrita
+    "opening": {
+      "clip": "media/jorge_open.mp4",
+      "cc": "Semana passada recebi uma mensagem no WhatsApp, parecia do meu fornecedor. Cliquei no link e o computador da oficina travou. Fiquei dois dias sem emitir nota."
+    },
+    "person": {
+      "name": "Seu Jorge",
+      "short": "Seu Jorge",
+      "role": "Dono de uma oficina mecânica com 5 funcionários",
+      "facts": [
+        "Cliente antigo da Horizonte, com linha móvel.",
+        "Na semana passada caiu num golpe de WhatsApp e ficou 2 dias sem emitir nota fiscal.",
+        "Desconfiado, sensível a preço e sem paciência para esperar atendimento.",
+        "O sobrinho dele “cuida do computador” da oficina."
+      ]
+    },
+    "stages": ["Objeção do sobrinho", "Preço", "Suporte", "Fechamento"],
+    "max": 10,
+    "start": "sobrinho",
+    "scenes": {
+      "sobrinho": {
+        "stage": 1, "title": "Objeção do sobrinho", "clip": "media/jorge2_q1.mp4",
+        "ctx": "Você abre a chamada e ele já corta.",
+        "client": "Olha, agradeço a ligação, mas meu sobrinho já cuida do computador aqui. Não preciso de antivírus, não.",
+        "prompt": "O que você responde?",
+        "options": [
+          { "q": 2, "clip": "media/jorge2_r1a.mp4", "go": "preco",
+            "text": "“Faz sentido o sobrinho cuidar. O McAfee trabalha junto com ele e avisa antes de abrir um link como o que travou a oficina. Posso mostrar como fica?”",
+            "reply": "Hum… aí você me pegou. Explica melhor isso.",
+            "why": "Respeita quem já cuida, liga o produto ao susto real do Seu Jorge e oferece uma próxima etapa em vez de discutir." },
+          { "q": 2, "clip": "media/jorge2_r1b.mp4", "go": "preco",
+            "text": "“Que bom que ele ajuda. Me conta: ele estava aí na hora em que o link travou o computador? Como foi?”",
+            "reply": "Ele só vem à tarde. Quando chegou, o computador já tava travado… Tá, continua.",
+            "why": "Pergunta aberta, sem criticar o sobrinho: o próprio cliente percebe que ninguém estava protegendo a oficina na hora do golpe." },
+          { "q": 1, "clip": "media/jorge2_r1c.mp4", "go": "sobrinho2",
+            "text": "“Entendo, mas o McAfee é reconhecido no mundo todo e bem mais completo do que um técnico consegue instalar sozinho. Vale ter as duas camadas, o senhor concorda?”",
+            "reply": "Todo mundo precisa… isso eu já ouvi.",
+            "why": "Generalidade sem prova (“reconhecido no mundo todo”) e ainda compara com o sobrinho. O material só diz que a McAfee foi a solução mais completa entre três fabricantes." },
+          { "q": 0, "clip": "media/jorge2_r1d.mp4", "go": "sobrinho2",
+            "text": "“Entendo, mas sobrinho é família: na hora do aperto ele não tem obrigação de largar tudo para resolver. Segurança da oficina é melhor ficar com uma empresa, não acha?”",
+            "reply": "Ué, o menino é bom! Não fala assim dele, não.",
+            "why": "Soa como cuidado, mas desqualifica uma pessoa de confiança do cliente e propõe tirá-la do caminho. O McAfee não substitui o sobrinho: trabalha junto com ele." },
+          { "q": 0, "clip": "media/jorge2_r1e.mp4", "set": ["mentiu_lgpd"], "go": "sobrinho2", "memo": "Você inventou uma multa da LGPD. Ele vai comentar isso com alguém.",
+            "text": "“Sem antivírus, a oficina fica irregular com a LGPD e pode levar multa. Melhor resolver isso logo, antes de uma fiscalização.”",
+            "reply": "Multa? Ninguém nunca me falou disso… Tem certeza?",
+            "why": "Inventado: o material não fala de multa da LGPD por falta de antivírus. Medo falso pode até funcionar na hora, mas vira desconfiança quando o cliente confere." }
+        ],
+        "best": "Respeite quem já cuida e mostre o que o produto acrescenta, ligando ao susto real do cliente (ou pergunte como foi).",
+        "src": "Material de produto, p. 3 (PME sem TI próprio) e p. 6 (navegação segura)"
+      },
+      "sobrinho2": {
+        "stage": 1, "retry": true, "title": "Objeção do sobrinho", "clip": "media/jorge2_q1b.mp4",
+        "ctx": "Ele ainda não se convenceu e vai direto ao ponto.",
+        "client": "Olha, vou ser sincero: eu só quero saber uma coisa. Isso teria evitado o que aconteceu semana passada?",
+        "prompt": "O que você responde?",
+        "options": [
+          { "q": 2, "pts": 1, "clip": "media/jorge2_r1f.mp4", "go": "preco",
+            "text": "“Teria ajudado: ele avisa antes de abrir link falso como aquele e bloqueia muito site de golpe. Garantia de 100% ninguém dá, mas o risco cai bastante.”",
+            "reply": "Tá. Pelo menos você foi honesto. E quanto custa isso?",
+            "why": "Boa recuperação: resposta direta, ligada ao caso dele e honesta sobre o limite. Vale 1 ponto nesta etapa, porque podia ter vindo na primeira resposta." },
+          { "q": 0, "dt": 0, "clip": "media/jorge2_r1g.mp4", "set": ["p100"], "go": "preco", "memo": "Você garantiu 100%. O Seu Jorge vai querer confirmar isso antes de fechar.",
+            "text": "“Teria evitado, sim, com certeza. Com ele instalado, o senhor fica cem por cento protegido.”",
+            "reply": "Cem por cento? Hum… então vamos ver o preço.",
+            "why": "Promessa de 100% que nenhum antivírus cumpre. Ele vai cobrar essa garantia antes de fechar." },
+          { "q": 0, "clip": "media/jorge2_r1h.mp4", "end": "saiu",
+            "text": "“Aí eu teria que ver com a equipe técnica, não sei te dizer com certeza.”",
+            "reply": "Então nem você sabe o que tá vendendo. Tenho cliente esperando, tchau.",
+            "why": "Era a pergunta mais importante da conversa e a resposta está no material (navegação segura avisa sobre links e sites falsos). Cliente cético desliga na hora." }
+        ],
+        "best": "Responda direto e com honestidade: teria ajudado a avisar sobre o link, sem garantir 100%.",
+        "src": "Material de produto, p. 6 (navegação segura) · Lista do que não prometer"
+      },
+      "preco": {
+        "stage": 2, "title": "Preço", "clip": "media/jorge2_q2.mp4",
+        "ctx": "Ele foi direto ao preço.",
+        "client": "Tá, mas e o preço? Dez aparelhos por trinta e cinco e noventa e nove por mês? Quanto dá por aparelho? E desconto pra fechar hoje, tem?",
+        "prompt": "Como você responde?",
+        "aid": "<b>Preço de prateleira por mês</b><table><tr><td>Premium 5 dispositivos</td><td><b>R$ 19,99</b></td></tr><tr><td>Premium 10 dispositivos</td><td><b>R$ 35,99</b></td></tr></table>O material não traz nenhuma política de desconto.",
+        "options": [
+          { "q": 2, "clip": "media/jorge2_r2a.mp4", "go": "suporte",
+            "text": "“No plano de 10 dá uns R$ 3,60 por aparelho por mês. Desconto eu não tenho, mas dois dias sem emitir nota custam bem mais que isso.”",
+            "reply": "Dois dias parado custou bem mais. Justo.",
+            "why": "Responde as duas perguntas: valor por aparelho (35,99 ÷ 10) e desconto (não existe). E compara com o custo real do incidente." },
+          { "q": 1, "clip": "media/jorge2_r2b.mp4", "go": "suporte",
+            "text": "“Esse é o preço de prateleira e eu não consigo mexer nele. Mas pense que, por aparelho, sai menos que um cafezinho por dia.”",
+            "reply": "Hum. Então tá caro mesmo.",
+            "why": "Não inventa desconto, mas a comparação do cafezinho é genérica. O que pesa para ele é o custo real de ficar parado." },
+          { "q": 1, "clip": "media/jorge2_r2d.mp4", "go": "preco2",
+            "text": "“Antes de falar de preço: são dez aparelhos mesmo? Se forem menos, o plano de 5 sai por R$ 19,99.”",
+            "reply": "São dez, sim. Mas você não me respondeu: tem desconto ou não tem?",
+            "why": "Conferir os aparelhos é bom hábito, mas ele fez duas perguntas diretas e você fugiu das duas. Cliente desconfiado percebe." },
+          { "q": 0, "dt": 4, "clip": "media/jorge2_r2c.mp4", "set": ["desconto"], "go": "suporte", "memo": "Você prometeu 30% de desconto. Ele vai pedir isso por escrito.",
+            "text": "“Deixa eu ver com a coordenação: se o senhor fechar hoje, acho que consigo liberar uns 30% de desconto na primeira mensalidade.”",
+            "reply": "Trinta por cento? Opa, então fecha.",
+            "why": "Parece atencioso, mas inventa um desconto: o material só traz preço de prateleira. Gera promessa que a empresa não cumpre." },
+          { "q": 0, "dt": 4, "clip": "media/jorge2_r2e.mp4", "set": ["desconto"], "go": "suporte", "memo": "Você prometeu um mês grátis por indicação. Ele vai pedir isso por escrito.",
+            "text": "“Desconto direto não tenho, mas se o senhor indicar dois amigos, eu consigo um mês grátis para a oficina.”",
+            "reply": "Mês grátis? Opa, então anota aí que eu indico.",
+            "why": "Soa como alternativa honesta ao desconto, mas também é inventado: não existe programa de indicação no material." }
+        ],
+        "best": "Mostre o valor por aparelho, diga que não há desconto e compare com o custo de ficar parado.",
+        "src": "Material de produto, p. 7 (preços de prateleira)"
+      },
+      "preco2": {
+        "stage": 2, "retry": true, "title": "Preço", "still": true,
+        "ctx": "Ele acabou de cobrar a resposta e espera.",
+        "client": "São dez, sim. Mas você não me respondeu: tem desconto ou não tem?",
+        "prompt": "O que você responde?",
+        "options": [
+          { "q": 2, "pts": 1, "clip": "media/jorge2_r2a.mp4", "go": "suporte",
+            "text": "“Desconto não tenho: é preço de prateleira. Com dez aparelhos dá uns R$ 3,60 por aparelho, bem menos do que dois dias sem emitir nota.”",
+            "reply": "Dois dias parado custou bem mais. Justo.",
+            "why": "Resposta direta e honesta, com o valor por aparelho e o custo do incidente. Vale 1 ponto: precisou ser cobrado." },
+          { "q": 1, "clip": "media/jorge2_r2b.mp4", "go": "suporte",
+            "text": "“Não tenho desconto, não. Mas por aparelho sai menos que um cafezinho por dia.”",
+            "reply": "Hum. Então tá caro mesmo.",
+            "why": "Honesto, mas genérico. O argumento forte era o custo de dois dias parado." },
+          { "q": 0, "dt": 4, "clip": "media/jorge2_r2c.mp4", "set": ["desconto"], "go": "suporte", "memo": "Você prometeu 30% de desconto. Ele vai pedir isso por escrito.",
+            "text": "“Tem, sim: fechando hoje, consigo uns 30% na primeira mensalidade.”",
+            "reply": "Trinta por cento? Opa, então fecha.",
+            "why": "Desconto inventado para sair da saia justa. Ele vai cobrar antes de fechar." }
+        ],
+        "best": "Responda o que ele perguntou: não há desconto; são cerca de R$ 3,60 por aparelho.",
+        "src": "Material de produto, p. 7 (preços de prateleira)"
+      },
+      "suporte": {
+        "stage": 3, "title": "Suporte", "clip": "media/jorge2_q3.mp4",
+        "ctx": "Última dúvida antes de decidir.",
+        "client": "E se der problema depois? Quem me atende? Eu não tenho tempo pra ficar esperando resposta de empresa.",
+        "prompt": "O que você responde?",
+        "next": [{ "if": "desconto", "go": "cobra_desc" }, { "if": "p100", "go": "cobra_100" }, { "go": "fechamento" }],
+        "options": [
+          { "q": 2, "clip": "media/jorge2_r3a.mp4",
+            "text": "“Liga na central da Horizonte, que tenta resolver na hora. Se precisar, passa o caso para a McAfee, que responde direto ao senhor em até 3 dias.”",
+            "reply": "Três dias… pelo menos sei como funciona.",
+            "why": "Descreve o fluxo real e o prazo do material. O cliente sabe o que esperar e você não cria uma promessa que não pode cumprir." },
+          { "q": 1, "clip": "media/jorge2_r3b.mp4", "set": ["vago"], "go": "suporte2",
+            "text": "“O senhor pode contar com a gente: qualquer problema é só ligar que a equipe resolve. E a McAfee tem um dos melhores suportes do mercado.”",
+            "reply": "Resolve como? Quem é que atende, me explica isso direito?",
+            "why": "Promessa vaga e sem respaldo no material. Ele perguntou “quem” e “como”, e você respondeu com “a equipe” e “o melhor do mercado”." },
+          { "q": 1, "clip": "media/jorge2_r3d.mp4", "go": "suporte2",
+            "text": "“O sobrinho continua ajudando no dia a dia e, se ele não resolver, o senhor liga na central da Horizonte.”",
+            "reply": "E se nem o sobrinho nem a central resolverem? Aí eu fico parado de novo?",
+            "why": "Começa bem, mas para no meio: faltou dizer que a central encaminha para a McAfee e o prazo de até 3 dias." },
+          { "q": 0, "dt": 4, "clip": "media/jorge2_r3c.mp4", "set": ["mentiu_sup"], "memo": "Você prometeu atendimento 24 horas. Na primeira dúvida, ele vai testar.",
+            "text": "“Esse é o ponto forte: atendimento 24 horas, com um especialista da McAfee resolvendo na hora, sem o senhor esperar nem pagar a mais.”",
+            "reply": "Ótimo, então fico tranquilo. Pode fechar.",
+            "why": "Não consta no material. O fluxo real é central da operadora primeiro e, se preciso, McAfee em até 3 dias." },
+          { "q": 0, "dt": 4, "clip": "media/jorge2_r3e.mp4", "set": ["mentiu_sup"], "memo": "Você virou o suporte pessoal dele. Ele vai ligar.",
+            "text": "“Pode me chamar direto no meu WhatsApp, a qualquer hora. Eu mesmo resolvo para o senhor.”",
+            "reply": "Ah, então eu tenho seu número direto? Aí sim, gostei.",
+            "why": "Parece atencioso, mas é uma promessa pessoal que você não sustenta (férias, outros clientes, falta de acesso técnico) e pula o canal oficial." }
+        ],
+        "best": "Explique o fluxo real: central da Horizonte primeiro e, se precisar, McAfee em até 3 dias.",
+        "src": "Material de produto, p. 8 (suporte e cancelamento)"
+      },
+      "suporte2": {
+        "stage": 3, "retry": true, "title": "Suporte", "still": true,
+        "ctx": "Ele espera uma resposta concreta.",
+        "client": [
+          { "if": "vago", "text": "Resolve como? Quem é que atende, me explica isso direito?" },
+          { "text": "E se nem o sobrinho nem a central resolverem? Aí eu fico parado de novo?" }
+        ],
+        "prompt": "O que você responde?",
+        "next": [{ "if": "desconto", "go": "cobra_desc" }, { "if": "p100", "go": "cobra_100" }, { "go": "fechamento" }],
+        "options": [
+          { "q": 2, "pts": 1, "clip": "media/jorge2_r3a.mp4",
+            "text": "“Primeiro a central da Horizonte tenta resolver na hora. Se não der, ela passa para a McAfee, que responde direto ao senhor em até 3 dias.”",
+            "reply": "Três dias… pelo menos sei como funciona.",
+            "why": "Agora sim: quem atende, em que ordem e em quanto tempo. Vale 1 ponto, porque precisou ser cobrado." },
+          { "q": 0, "dt": 4, "clip": "media/jorge2_r3c.mp4", "set": ["mentiu_sup"], "memo": "Você prometeu atendimento 24 horas. Na primeira dúvida, ele vai testar.",
+            "text": "“Aí entra a McAfee, com atendimento 24 horas e um especialista resolvendo na hora.”",
+            "reply": "Ótimo, então fico tranquilo. Pode fechar.",
+            "why": "Inventado: o prazo da McAfee é de até 3 dias, sem atendimento 24 horas." },
+          { "q": 0, "dt": 4, "clip": "media/jorge2_r3e.mp4", "set": ["mentiu_sup"], "memo": "Você virou o suporte pessoal dele. Ele vai ligar.",
+            "text": "“Aí o senhor me chama no WhatsApp, que eu resolvo pessoalmente.”",
+            "reply": "Ah, então eu tenho seu número direto? Aí sim, gostei.",
+            "why": "Promessa pessoal que você não sustenta e que pula o canal oficial de suporte." }
+        ],
+        "best": "Central da Horizonte primeiro; se não resolver, McAfee em até 3 dias.",
+        "src": "Material de produto, p. 8 (suporte e cancelamento)"
+      },
+      "cobra_desc": {
+        "title": "Ele lembrou", "clip": "media/jorge2_q4.mp4",
+        "ctx": "Ele lembrou do desconto que você citou.",
+        "client": "Ah, antes de fechar: aquele desconto que você falou já vem na primeira fatura, né? Quero ver isso escrito.",
+        "prompt": "O que você responde?",
+        "next": [{ "if": "p100", "go": "cobra_100" }, { "go": "fechamento" }],
+        "options": [
+          { "q": 2, "dt": -4, "unset": ["desconto"], "clip": "media/jorge2_r4a.mp4",
+            "text": "“Preciso corrigir o que eu disse: não existe esse desconto. O valor é o de prateleira, uns R$ 3,60 por aparelho.”",
+            "reply": "Hum… não tem, então. Tá, pelo menos você falou antes de eu assinar.",
+            "why": "Corrigir custa um pouco de confiança agora, mas evita reclamação na primeira fatura." },
+          { "q": 0, "dt": 4, "set": ["mentiu_desc"], "clip": "media/jorge2_r4b.mp4",
+            "text": "“Vem, sim. Pode ficar tranquilo que eu deixo anotado no pedido.”",
+            "reply": "Beleza. Se não vier, eu te ligo, hein.",
+            "why": "Mentira que deixa o cliente feliz hoje e vira reclamação quando a fatura chegar cheia." },
+          { "q": 0, "dt": 4, "set": ["mentiu_desc"], "clip": "media/jorge2_r4b.mp4",
+            "text": "“Deixa eu confirmar o percentual certinho com a coordenação e te mando por escrito ainda hoje.”",
+            "reply": "Beleza. Se não vier, eu te ligo, hein.",
+            "why": "Parece prudente, mas mantém viva uma promessa que não existe. O e-mail “por escrito” nunca vai sair, e a fatura chega cheia." }
+        ],
+        "best": "Corrija na hora: não há desconto, só o preço de prateleira.",
+        "src": "Material de produto, p. 7 (só preços de prateleira)"
+      },
+      "cobra_100": {
+        "title": "Ele lembrou", "clip": "media/jorge2_q5.mp4",
+        "ctx": "Antes de fechar, ele volta na garantia que você deu.",
+        "client": "Outra coisa: você falou que, com isso, não acontece mais aquele problema. Posso contar com isso, né?",
+        "prompt": "O que você responde?",
+        "next": "fechamento",
+        "options": [
+          { "q": 2, "dt": -4, "unset": ["p100"], "clip": "media/jorge2_r5a.mp4",
+            "text": "“Vou corrigir: 100% ninguém garante. Ele avisa e bloqueia boa parte dos links e sites falsos, mas golpe por conversa ainda pede cuidado da equipe.”",
+            "reply": "Entendi. Melhor saber a verdade agora.",
+            "why": "Corrigir a promessa custa um pouco agora e salva a venda depois." },
+          { "q": 0, "dt": 4, "set": ["mentiu_100"], "clip": "media/jorge2_r5b.mp4",
+            "text": "“Pode contar, é garantido. Se acontecer alguma coisa, a McAfee resolve.”",
+            "reply": "Então tá. Vou falar pro pessoal que agora tá garantido.",
+            "why": "Confirma uma promessa impossível, e ele ainda vai repassar à equipe, que pode baixar a guarda." },
+          { "q": 0, "dt": 4, "set": ["mentiu_100"], "clip": "media/jorge2_r5b.mp4",
+            "text": "“Garantia em contrato ninguém dá, mas na prática é isso: com ele instalado, aquele problema não se repete.”",
+            "reply": "Então tá. Vou falar pro pessoal que agora tá garantido.",
+            "why": "Começa recuando, mas termina reafirmando a garantia. O que ele ouve é “não se repete”, e é isso que ele vai repassar à equipe." }
+        ],
+        "best": "Corrija na hora: o produto reduz muito o risco, mas não garante 100%.",
+        "src": "Material de produto, p. 6 · Lista do que não prometer"
+      },
+      "fechamento": {
+        "stage": 4, "title": "Fechamento", "clip": "media/jorge2_q6.mp4",
+        "ctx": "Ele está quase decidido.",
+        "client": "Tá bom. Se eu fechar agora, amanhã cedo já tá funcionando nos dez aparelhos?",
+        "prompt": "O que você responde?",
+        "next": "$fim",
+        "options": [
+          { "q": 2, "clip": "media/jorge2_r6a.mp4",
+            "text": "“Registro hoje. Depois da análise, a McAfee ativa a licença no dia seguinte e chega um e-mail com a credencial para instalar. Seu sobrinho mesmo consegue.”",
+            "reply": "Amanhã o e-mail chega e o menino instala. Pode registrar, tá fechado.",
+            "why": "Prazo real, passo a passo claro e ainda dá um papel ao sobrinho. O cliente sabe exatamente o que vai acontecer." },
+          { "q": 0, "dt": 4, "clip": "media/jorge2_r6b.mp4", "set": ["mentiu_fech"],
+            "text": "“Fica pronto antes: em uma hora já está tudo rodando nos dez aparelhos, a ativação é automática.”",
+            "reply": "Uma hora? Ótimo. Então fecha que eu aviso o pessoal.",
+            "why": "A ativação só ocorre no dia seguinte, depois da análise de crédito e fraude. Ele vai avisar a equipe de algo que não vai acontecer." },
+          { "q": 1, "clip": "media/jorge2_r6c.mp4", "end": "adiou",
+            "text": "“Depende da análise de crédito, então não sei te dizer o prazo certinho.”",
+            "reply": "Hum… então me liga quando souber o prazo, tá?",
+            "why": "Não inventa, mas o prazo está no material: ativação no dia seguinte, depois da análise. Por não saber, você perde o momento da venda." }
+        ],
+        "best": "Explique o passo a passo real: registro hoje, análise, ativação no dia seguinte e e-mail com a credencial.",
+        "src": "Material de produto, p. 8 a 10 (pós-venda)"
+      }
+    },
+    "ends": {
+      "desligou": { "pts": 0, "icon": "📵", "title": "O Seu Jorge desligou", "clip": "media/jorge2_r7.mp4",
+        "line": "Olha, rapaz, não tenho mais tempo pra isso, não. Passar bem.",
+        "epi": ["Cliente desconfiado dá pouca chance: quando a paciência acaba, ele encerra a conversa e não atende a próxima ligação."] },
+      "saiu": { "pts": 0, "icon": "📵", "title": "Ele desligou na sua cara",
+        "line": "Então nem você sabe o que tá vendendo. Tenho cliente esperando, tchau.",
+        "epi": ["A pergunta mais importante da conversa ficou sem resposta. Quem não domina o básico perde o cliente cético na hora."] },
+      "adiou": { "pts": 1, "icon": "⏳", "title": "Ele adiou a decisão",
+        "line": "Hum… então me liga quando souber o prazo, tá?",
+        "epi": ["Você retornou só dois dias depois e ele já tinha esfriado. Na semana seguinte, outro link falso parou a oficina de novo."] },
+      "cancelou": { "pts": 0, "icon": "📉", "title": "Fechou… e cancelou",
+        "line": "Pode registrar, tá fechado.",
+        "epi": [] },
+      "morno": { "pts": 1, "icon": "🤝", "title": "Fechou, mas de olho em você",
+        "line": "Tá, pode registrar. Mas vou ficar de olho, hein.",
+        "epi": ["Ele fechou, mas na primeira demora ligou reclamando. A venda saiu; a confiança, ainda não."] },
+      "indicou": { "pts": 2, "icon": "🌟", "title": "Fechou e indicou você",
+        "line": "Amanhã o e-mail chega e o menino instala. Pode registrar, tá fechado.",
+        "epi": ["A licença ativou no dia seguinte, como você disse, e o sobrinho instalou tudo. Uma semana depois, o Seu Jorge passou seu contato para o dono da autopeças ao lado."] }
+    },
+    "lies": {
+      "mentiu_desc": "O desconto prometido nunca apareceu na fatura.",
+      "mentiu_100": "Um funcionário caiu num golpe por WhatsApp, e ele lembrou que você tinha garantido 100%.",
+      "mentiu_fech": "Ele avisou a equipe que tudo estaria rodando em uma hora, mas a licença só ativou no dia seguinte.",
+      "mentiu_sup": "Na primeira dúvida, ninguém resolveu “na hora”: a McAfee respondeu em 3 dias, como diz o material.",
+      "mentiu_lgpd": "O contador dele explicou que não existe multa da LGPD por falta de antivírus."
+    },
+    finale(f, t) {
+      if (Object.keys(this.lies).some(x => f.has(x))) return "cancelou";
+      return t >= 72 ? "indicou" : "morno";
+    }
+  }
+};
+
+const POCKET = [
+  "<b>Pergunte antes de explicar.</b> Pergunta aberta sobre a rotina e sobre sustos recentes.",
+  "<b>Traduza.</b> “Um porteiro que confere tudo o que tenta entrar.” Conecte à história do cliente.",
+  "<b>Respeite quem já cuida.</b> Mostre o que o produto acrescenta ao trabalho do sobrinho, sem brigar.",
+  "<b>Básico × Premium.</b> O Básico protege o aparelho. O Premium acrescenta identidade completa e dark web, alerta de SMS e de wi-fi, VPN, filtro de conteúdo e Protection Score.",
+  "<b>Combine licenças.</b> Conte os aparelhos. Ex.: 14 aparelhos = 10 + 5 = R$ 55,98/mês. No plano de 10 sai a ~R$ 3,60 por aparelho.",
+  "<b>Prometa só o que existe.</b> Ativação no dia seguinte, após análise. Suporte: central primeiro, McAfee em até 3 dias. Só preço de prateleira, sem inventar desconto.",
+  "<b>Golpe por conversa.</b> Antivírus ajuda contra links e arquivos, não contra uma mensagem enganosa. Confirme por ligação antes de transferir."
+];
+const NOPROMISE = "Não prometa: proteção de 100%, instalação no mesmo dia, suporte “na hora”, desconto que não existe, portal de gestão de licenças (em desenvolvimento) nem relatório de conformidade com a LGPD.";
+
+/* ============================================================
+   SCORM 1.2 (adaptador mínimo)
+   ============================================================ */
+const SCORM = (() => {
+  let api = null, ok = false;
+  const find = w => { let n = 0; while (w && !w.API && w.parent && w.parent !== w && n < 10) { w = w.parent; n++; } return (w && w.API) || null; };
+  try { api = find(window) || (window.opener ? find(window.opener) : null); } catch (e) { api = null; }
+  const call = (fn, ...a) => { try { return api ? api[fn](...a) : ""; } catch (e) { return ""; } };
+  return {
+    init() { if (api) ok = String(call("LMSInitialize", "")) === "true"; return ok; },
+    get: k => ok ? call("LMSGetValue", k) : "",
+    set(k, v) { if (ok) call("LMSSetValue", k, String(v)); },
+    save() { if (ok) call("LMSCommit", ""); },
+    end() { if (ok) { call("LMSCommit", ""); call("LMSFinish", ""); ok = false; } },
+    get connected() { return ok; }
+  };
+})();
+
+/* ============================================================
+   Estado
+   ============================================================ */
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const app = $("#app");
+const esc = t => String(t).replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+const shuffle = a => { const r = a.map((x, i) => [x, i]); for (let i = r.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [r[i], r[j]] = [r[j], r[i]]; } return r; };
+const fmtTime = ms => { const s = Math.max(0, Math.round(ms / 1000)); return `${String(Math.floor(s / 3600)).padStart(4, "0")}:${String(Math.floor(s % 3600 / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`; };
+
+let R = { intro: false, read: null, marta: [], jorge: [], g: null };   // resultados por fase (intro/read não pontuam)
+let startedAt = Date.now();
+let muted = false;
+let timers = [];                                        // timeouts/raf a limpar ao trocar de tela
+
+const reduced = matchMedia("(prefers-reduced-motion:reduce)").matches;
+const gamePts = k => R[k] ? R[k].reduce((s, x) => s + x, 0) : 0;
+const simPts = k => play(k).pts;
+const phasePts = st => st.t === "game" ? gamePts(st.k) : st.t === "sim" ? simPts(st.k) : 0;
+const phaseMax = st => st.t === "game" ? (GAMES[st.k].draw || GAMES[st.k].cards.length) : st.t === "sim" ? SIMS[st.k].max : 0;
+const phaseDone = st => st.t === "video" ? !!R.intro : st.t === "read" ? !!R.read : st.t === "game" ? !!R[st.k] : !!play(st.k).end;
+
+/* Conversa ramificada: refaz o caminho a partir das escolhas salvas ({s: cena, o: opção}).
+   Devolve confiança, lembranças, nota por etapa, cena atual e desfecho (quando acabou). */
+const TRUST_MIN = 10;                                   // confiança nesse nível ou abaixo: o cliente encerra a chamada
+const cond = (c, f) => !c || (c[0] === "!" ? !f.has(c.slice(1)) : f.has(c));
+const pick = (v, f, key) => Array.isArray(v) ? (v.find(x => cond(x.if, f)) || {})[key] : v;   // texto ou destino que depende das lembranças
+function play(k) {
+  const S = SIMS[k], f = new Set(), stage = {};
+  let t = S.trust0 ?? 50, cur = S.start, end = null, n = 0;
+  for (const a of R[k]) {
+    const sc = S.scenes[cur], op = sc && a.s === cur && sc.options[a.o];
+    if (!op || end) break;
+    n++;
+    t = Math.max(4, Math.min(100, t + (op.dt ?? (S.trust || TRUST)[op.q])));
+    (op.set || []).forEach(x => f.add(x)); (op.unset || []).forEach(x => f.delete(x));
+    if (sc.stage) stage[sc.stage] = Math.max(stage[sc.stage] || 0, op.pts ?? op.q);
+    if (op.end) end = op.end;
+    else if (t <= TRUST_MIN) end = "desligou";
+    else { cur = op.go || pick(sc.next, f, "go"); if (cur === "$fim") end = S.finale(f, t); }
+  }
+  const pts = Object.values(stage).reduce((s, x) => s + x, 0) + (end ? S.ends[end].pts : 0);
+  return { t, f, stage, cur, end, n, pts };
+}
+const totalPts = () => FLOW.reduce((s, st) => s + phasePts(st), 0);
+const totalMax = () => FLOW.reduce((s, st) => s + phaseMax(st), 0);
+const nextPhase = () => FLOW.find(st => !phaseDone(st));
+const clearTimers = () => { timers.forEach(t => { clearTimeout(t); cancelAnimationFrame(t); }); timers = []; };
+
+function header(activeKey) {
+  const pts = totalPts();
+  const sc = $("#score");
+  const txt = `${pts} ${pts === 1 ? "ponto" : "pontos"}`;
+  if (sc.textContent !== txt) { sc.textContent = txt; sc.classList.remove("bump"); void sc.offsetWidth; sc.classList.add("bump"); }
+  $("#steps").innerHTML = FLOW.map(st => `<div class="${phaseDone(st) ? "done" : st.k === activeKey ? "now" : ""}"><i></i>${st.label}</div>`).join("");
+}
+function persist() {
+  SCORM.set("cmi.suspend_data", JSON.stringify({ i: R.intro || 0, r: R.read || 0, g: R.g, marta: R.marta.map(x => [x.s, x.o]), jorge: R.jorge.map(x => [x.s, x.o]) }));
+  SCORM.set("cmi.core.session_time", fmtTime(Date.now() - startedAt));
+  SCORM.save();
+}
+function stopMedia(root) {
+  // vídeo removido da página pode continuar tocando o áudio em segundo plano: pausa e descarrega antes de trocar a tela
+  (root || document).querySelectorAll("video").forEach(v => {
+    try { v.onended = null; v.onerror = null; v.pause(); v.removeAttribute("src"); v.load(); } catch (e) {}
+  });
+}
+function screen(html, key) {
+  clearTimers();
+  stopMedia(app);
+  app.innerHTML = html;
+  header(key);
+  app.setAttribute("tabindex", "-1"); app.focus({ preventScroll: true });
+  window.scrollTo({ top: 0 });
+}
+
+/* ============================================================
+   Hub e abertura de fase
+   ============================================================ */
+function showHub() {
+  screen(`
+  <section class="card">
+    <div class="eyebrow rise">Missão · cerca de 30 minutos</div>
+    <h1 class="rise d1">Missão McAfee: aprenda a vender proteção digital para PME</h1>
+    <p class="lead rise d2">Cinco fases, uma nota só. Primeiro um vídeo curto com o essencial, depois dois clientes em vídeo (gerados com IA) que reagem ao que você diz, e no fim um jogo contra golpes.</p>
+    <div class="phases">
+      <div class="phase rise d2"><div class="n">1</div><div><b>Vídeo de abertura (2 min)</b><span>Tudo o que você precisa saber, em animação.</span></div></div>
+      <div class="phase rise d2"><div class="n">2</div><div><b>Leitura do material (opcional)</b><span>Já leu? Pule direto para o teste.</span></div></div>
+      <div class="phase rise d3"><div class="n">3</div><div><b>Simulador com a Marta</b><span>Videochamada em 5 etapas. Cada resposta muda o rumo e o final da conversa.</span></div></div>
+      <div class="phase rise d3"><div class="n">4</div><div><b>Vídeo interativo: Seu Jorge</b><span>Cliente cético, focado em preço. Cada resposta muda o vídeo, o rumo e o final.</span></div></div>
+      <div class="phase g rise d4"><div class="n">5</div><div><b>Caça-golpe final</b><span>12 mensagens com golpes de 2026, 10 segundos cada. Golpe ou legítima?</span></div></div>
+    </div>
+    <p><b>Para ser aprovado:</b> ${PASS}% dos pontos do teste (fases 3 a 5). Você pode refazer. <b>Use fone ou ligue o som:</b> tudo também aparece em legenda.</p>
+    <button class="btn go" id="go">Começar a missão</button>
+  </section>`);
+  $("#go").onclick = route;
+}
+
+/* ---------- Fase 1: vídeo de abertura ---------- */
+const INTRO = {
+  src: "media/intro.mp4", poster: "media/intro.jpg",
+  // a legenda já está queimada no vídeo (sem botão CC)
+};
+
+function showVideo() {
+  screen(`
+  <section class="card">
+    <div class="eyebrow rise">Fase 1 de 5 · vídeo de abertura</div>
+    <h1 class="rise d1">O essencial em menos de 2 minutos</h1>
+    <p class="lead rise d2">Um vídeo curto com o que você precisa saber sobre o McAfee Antivírus Premium. Dá para pausar e voltar quando quiser.</p>
+    <div class="screen rise d2" id="scr" style="margin:16px 0">
+      <video id="vid" playsinline preload="metadata" poster="${MEDIA(INTRO.poster)}" aria-label="Vídeo de abertura"></video>
+    </div>
+    <div class="rise d3" id="acts">
+      <button class="btn go" id="play"><span aria-hidden="true">▶</span> Assistir (1 min 40)</button>
+      <button class="btn ghost" id="skipv" style="margin-left:8px">Já conheço, pular</button>
+    </div>
+  </section>`, "intro");
+  const v = $("#vid");
+  const finish = how => { R.intro = how; persist(); route(); };
+  const ended = () => {
+    $("#acts").innerHTML = `<button class="btn go" id="nextv">Continuar</button>`;
+    $("#nextv").onclick = () => finish("seen"); $("#nextv").focus({ preventScroll: true });
+  };
+  $("#skipv").onclick = () => finish("skipped");
+  $("#play").onclick = () => {
+    v.controls = true;
+    $("#acts").innerHTML = `<button class="btn ghost" id="skipv2">Pular o resto ▸</button>`;
+    $("#skipv2").onclick = () => finish("skipped");
+    playClip(v, INTRO.src, { onend: ended });
+  };
+}
+
+/* ---------- Fase 2: leitura (opcional) ---------- */
+const READ = [
+  { t: "O produto em 1 minuto", h: `
+    <p>O <b>McAfee Antivírus Premium</b> é um serviço com um software de segurança que detecta, previne e remove ameaças (vírus, ransomware, phishing). Monitora o dispositivo o tempo todo e funciona em <b>Windows, macOS, Android e iOS</b>.</p>
+    <p><b>Para explicar a um cliente leigo:</b> “um porteiro que confere tudo o que tenta entrar nos computadores e celulares”.</p>
+    <p><b>Por que PME:</b> 75% dos incidentes avaliados no Sophos Threat Report 2024 foram em pequenos negócios. Elas não têm TI próprio, nem conhecimento técnico, e têm pouco orçamento. Os prejuízos financeiros e de reputação podem ser irreversíveis.</p>` },
+  { t: "Básico × Premium", h: `
+    <p>A partir de novembro, os clientes de <b>banda larga</b> recebem o <b>Básico</b> incluso no plano. É a porta de entrada para oferecer o Premium.</p>
+    <table><tr><th>Funcionalidade</th><th>Básico</th><th>Premium</th></tr>
+    <tr><td>Antivírus em tempo real, ransomware e phishing</td><td class="y">sim</td><td class="y">sim</td></tr>
+    <tr><td>Navegação, wi-fi e download seguro</td><td class="y">sim</td><td class="y">sim</td></tr>
+    <tr><td>Firewall, criptomineração, rastreadores</td><td class="y">sim</td><td class="y">sim</td></tr>
+    <tr><td>Gerenciador de senhas</td><td class="y">sim</td><td class="y">sim</td></tr>
+    <tr><td>Proteção de identidade</td><td class="n">só e-mail</td><td class="y">completa (cartão do SUS, cartão de crédito, login, CPF)</td></tr>
+    <tr><td>Monitoramento da dark web (até 10 itens)</td><td class="n">não</td><td class="y">sim</td></tr>
+    <tr><td>Alerta de fraude por SMS</td><td class="n">não</td><td class="y">sim</td></tr>
+    <tr><td>Alerta de wi-fi desconhecido</td><td class="n">não</td><td class="y">sim</td></tr>
+    <tr><td>VPN</td><td class="n">não</td><td class="y">sim</td></tr>
+    <tr><td>Filtro de conteúdo</td><td class="n">não</td><td class="y">sim</td></tr>
+    <tr><td>Protection Score (nota e recomendações)</td><td class="n">não</td><td class="y">sim</td></tr>
+    <tr><td>Portal de gestão de licenças</td><td class="n">não</td><td class="n">em desenvolvimento</td></tr></table>` },
+  { t: "Planos e preços", h: `
+    <p>Preços de prateleira, por mês:</p>
+    <table><tr><th>Plano</th><th>Preço</th><th>Por aparelho</th></tr>
+    <tr><td>Premium 1 dispositivo</td><td>R$ 9,99</td><td>R$ 9,99</td></tr>
+    <tr><td>Premium 5 dispositivos</td><td>R$ 19,99</td><td>R$ 4,00</td></tr>
+    <tr><td>Premium 10 dispositivos</td><td>R$ 35,99</td><td>R$ 3,60</td></tr></table>
+    <p><b>Regra de venda:</b> pode vender quantas licenças quiser, de qualquer plano, para a mesma linha móvel. Combine para cobrir os aparelhos pelo menor custo. Ex.: 14 aparelhos = 10 + 5 = <b>R$ 55,98/mês</b>.</p>
+    <p>O material não traz política de desconto: só o preço de prateleira.</p>` },
+  { t: "Depois da venda", h: `
+    <ol><li><b>Você</b> escolhe o plano com o cliente e registra o pedido junto da linha móvel.</li>
+    <li><b>A Operadora</b> faz a análise de crédito e de fraude.</li>
+    <li><b>A McAfee</b> ativa a licença automaticamente no dia seguinte.</li>
+    <li><b>O cliente</b> recebe o e-mail de boas-vindas com a credencial.</li>
+    <li><b>O cliente</b> entra no portal, baixa o aplicativo e instala. Você recebe um e-mail confirmando a entrega.</li></ol>
+    <p><b>Suporte:</b> o cliente liga para a central da Operadora, que tenta resolver com a base de perguntas frequentes. Se não resolver, encaminha para a McAfee, que responde direto ao cliente em até 3 dias.</p>
+    <p><b>Cancelamento:</b> na central. O atendente calcula a multa contratual, quando houver.</p>` },
+  { t: "Como conversar e o que não prometer", h: `
+    <ul><li><b>Pergunte antes de explicar.</b> Perguntas abertas: “como vocês cuidam hoje da segurança?”, “já rolou algum susto com golpe ou vírus?”.</li>
+    <li><b>Traduza.</b> Use analogias e ligue ao caso do cliente, sem jargão.</li>
+    <li><b>Responda a objeção do Básico</b> dizendo o que o Premium acrescenta, sem desvalorizar o Básico.</li></ul>
+    <div class="warn"><b>Não prometa:</b> proteção de 100%, instalação no mesmo dia, suporte “na hora”, desconto que não existe, portal de gestão de licenças (em desenvolvimento) nem relatório de conformidade com a LGPD.</div>` }
+];
+
+function showRead() {
+  screen(`
+  <section class="card">
+    <div class="eyebrow rise">Fase 2 de 5 · leitura (opcional)</div>
+    <h1 class="rise d1">Antes do teste: já leu o material?</h1>
+    <p class="lead rise d2">Se já conhece o produto, pule direto para o teste. Se não, leia os 5 cartões abaixo (cerca de 5 minutos). Tudo vem do material de produto, do playbook e do argumentário.</p>
+    <div class="skipbar rise d3"><span><b>Já leu?</b> Pule sem problema.</span><button class="btn go" id="skipr">✅ Já li, ir para o teste</button></div>
+    <div class="rise d3">${READ.map((c, i) => `<details class="rd"><summary>${i + 1}. ${esc(c.t)}</summary><div class="bd">${c.h}</div></details>`).join("")}</div>
+    <div class="next"><button class="btn" id="doner">Li tudo, ir para o teste</button></div>
+  </section>`, "read");
+  $("#skipr").onclick = () => { R.read = "skipped"; persist(); route(); };
+  $("#doner").onclick = () => { R.read = "read"; persist(); route(); };
+}
+
+function phaseIntro(st) {
+  if (st.t === "game") {
+    const g = GAMES[st.k];
+    screen(`
+    <section class="card splash">
+      <div class="badge pop">${g.badge}</div>
+      <div class="eyebrow rise">Fase ${FLOW.indexOf(st) + 1} de 5</div>
+      <h1 class="rise d1">${esc(g.title)}</h1>
+      <p class="lead rise d2">${esc(g.intro)}</p>
+      <p class="rise d3" style="color:var(--muted);font-size:14px">Arraste a carta para a esquerda (golpe) ou para a direita (legítima), use os botões ou as setas ← →.</p>
+      <button class="btn go rise d4" id="go">Jogar</button>
+    </section>`, st.k);
+    $("#go").onclick = () => runGame(st.k);
+  } else {
+    const S = SIMS[st.k], p = S.person;
+    screen(`
+    <section class="card">
+      <div class="eyebrow rise">Fase ${FLOW.indexOf(st) + 1} de 5 · ${S.opening ? "vídeo interativo" : "simulador"}</div>
+      <h1 class="rise d1">${esc(S.title)}</h1>
+      <p class="lead rise d2">${esc(S.blurb)}</p>
+      <div class="screen rise d2" id="scr" style="margin:16px 0">
+        <video id="vid" playsinline preload="none" poster="${MEDIA(S.poster)}" aria-label="${esc(p.name)}"></video>
+        <div class="tag"><span class="live"></span> ${esc(S.display)}</div>
+        <div class="cc" id="cc"></div>
+      </div>
+      <div class="client rise d3"><div class="avatar" style="background-image:url(${MEDIA(S.poster)})" role="img" aria-label="${esc(p.name)}"></div><div><b>${esc(p.name)}</b><span>${esc(p.role)}</span></div></div>
+      <ul class="clean rise d3">${p.facts.map(f => `<li>${esc(f)}</li>`).join("")}</ul>
+      <div class="rise d4" id="acts">
+        ${S.opening ? `<button class="btn" id="watch"><span aria-hidden="true">▶</span> Ver o que aconteceu</button>` : `<button class="btn call" id="go"><span aria-hidden="true">📞</span> Atender a chamada</button>`}
+      </div>
+    </section>`, st.k);
+    if (S.opening) {
+      $("#watch").onclick = () => {
+        const v = $("#vid"); $("#cc").textContent = S.opening.cc; $("#cc").classList.add("swap");
+        $("#acts").innerHTML = `<button class="btn ghost" id="skipw">Pular ▸</button>`;
+        const done = () => { $("#acts").innerHTML = `<button class="btn call" id="go"><span aria-hidden="true">📞</span> Atender a chamada</button>`; $("#go").onclick = () => runSim(st.k, 0); $("#go").focus({ preventScroll: true }); v.pause(); };
+        $("#skipw").onclick = done;
+        playClip(v, S.opening.clip, { onend: done });
+      };
+    } else $("#go").onclick = () => runSim(st.k, 0);
+  }
+}
+
+function route() {
+  const st = nextPhase();
+  if (!st) return showResult();
+  if (st.t === "video") return showVideo();
+  if (st.t === "read") return showRead();
+  if (st.t === "game") return phaseIntro(st);
+  const n = R[st.k].length;
+  if (n > 0) return runSim(st.k, n);
+  phaseIntro(st);
+}
+
+/* ============================================================
+   Caça-golpe
+   ============================================================ */
+function mock(c) {
+  const flagTag = `<span class="m-tag">${{ sms: "SMS", mail: "E-MAIL", wa: "WHATSAPP", site: "SITE", wifi: "WI-FI", call: "LIGAÇÃO", receipt: "COMPROVANTE", push: "NOTIFICAÇÃO", popup: "NAVEGADOR", ad: "ANÚNCIO", dm: "INSTAGRAM", pixauto: "PIX AUTOMÁTICO" }[c.type]}</span>`;
+  const ctx = c.ctx ? `<div class="ctxline">${esc(c.ctx)}</div>` : "";
+  // link escondido: mostra só o texto do botão; o endereço real aparece ao tocar (o tempo continua)
+  const body = t => esc(t || "").replace("{link}", c.link ? `<button type="button" class="lk" data-url="${esc(c.link.url)}">${esc(c.link.text)}</button>` : "");
+  if (c.type === "sms") return `${ctx}<div class="m-sms"><div class="m-from">${flagTag} ${esc(c.from)} · ${esc(c.time)}</div><div class="bub">${body(c.text)}</div></div>`;
+  if (c.type === "wa") return `${ctx}<div class="m-wa"><div class="head"><div class="ava">${esc(c.name[0])}</div><div><b>${esc(c.name)}</b><div style="font-size:12px;color:#6b7686">${c.saved ? "contato salvo" : esc(c.num)}</div></div>${flagTag}</div>${c.audio ? `<div class="bub"><div class="aud">▶ <i></i> ${esc(c.audio)}</div><div class="tr">Transcrição: “${esc(c.text)}”</div></div>` : `<div class="bub">${body(c.text)}</div>`}${c.key ? `<div class="bub">Chave Pix: <code>${esc(c.key)}</code></div>` : ""}</div>`;
+  if (c.type === "mail") return `${ctx}<div class="m-mail"><div class="row">${flagTag} <b>De:</b> ${esc(c.from)}</div><div class="row"><b>Assunto:</b> ${esc(c.subject)}</div><div class="body">${body(c.text)}${c.attach ? `<div><span class="chip">📎 ${esc(c.attach)}</span></div>` : ""}</div></div>`;
+  if (c.type === "site") return `${ctx}<div class="m-site"><div class="bar2">🔒 <span>${esc(c.url)}</span></div><div class="login"><b>${esc(c.title)}</b>Entre na sua conta<div>CPF</div><div>Senha</div></div></div>`;
+  if (c.type === "wifi") return `${ctx}<div class="m-wifi"><div class="net"><span>📶 Casa_do_Pão</span><span>🔒</span></div><div class="net" style="background:#FFF3D6"><span>📶 ${esc(c.net)}</span><span>aberta</span></div><div class="portal"><b>Acesso gratuito à internet</b><div>CPF</div><div>Número do cartão</div></div></div>`;
+  if (c.type === "call") return `${ctx}<div class="m-call"><div class="who"><div class="ava">📞</div><div><b>${esc(c.caller)}</b><span>${esc(c.num)} · chamada em andamento</span></div>${flagTag}</div><div class="bub">“${esc(c.text)}”</div></div>`;
+  if (c.type === "receipt") return `${ctx}<div class="m-rcpt">${flagTag}<b>${esc(c.bank)} · Comprovante Pix</b><div class="amt">${esc(c.amount)}</div><div class="ln"><span>Para</span><span>${esc(c.to)}</span></div><div class="ln"><span>Situação</span><span>${esc(c.status)}</span></div><div class="ln"><span>ID</span><span>E3841…92A</span></div></div>`;
+  if (c.type === "push") return `${ctx}<div class="m-push"><div class="ph">${flagTag} <b>${esc(c.app)}</b> · ${esc(c.time)}</div><b>${esc(c.title)}</b><div>${esc(c.text)}</div></div>`;
+  if (c.type === "popup") return `${ctx}<div class="m-pop"><div class="bar2">⚠ <span>${esc(c.url)}</span></div><div class="alert"><b>${esc(c.title)}</b><div>${esc(c.text)}</div></div></div>`;
+  if (c.type === "ad") return `${ctx}<div class="m-ad"><div class="head"><div class="ava">🏛</div><div><b>${esc(c.page)}</b><div style="font-size:12px;color:#6b7686">Patrocinado</div></div>${flagTag}</div><div class="bub">${body(c.text)}</div></div>`;
+  if (c.type === "dm") return `${ctx}<div class="m-dm"><div class="head"><div class="ava">Ⓜ</div><div><b>${esc(c.name)}</b><div style="font-size:12px;color:#6b7686">${esc(c.handle)}</div></div>${flagTag}</div><div class="bub">${body(c.text)}</div></div>`;
+  if (c.type === "pixauto") return `${ctx}<div class="m-pixa">${flagTag}<b>Autorizar Pix Automático?</b><div class="ln"><span>Recebedor</span><span>${esc(c.payee)}</span></div><div class="ln"><span>Valor</span><span>${esc(c.amount)}</span></div><div class="ln"><span>Validade</span><span>${esc(c.end)}</span></div><div class="fake"><span>Recusar</span><span>Autorizar</span></div></div>`;
+  return "";
+}
+
+function runGame(k) {
+  const G = GAMES[k], SECS = G.secs || 12;
+  const res = []; let i = 0, streak = 0, locked = false;
+  // sorteio equilibrado: G.drawScam golpes + o resto em legítimas, embaralhados
+  const pickN = (arr, n) => shuffle(arr).slice(0, n).map(x => x[0]);
+  const order = G.draw ? shuffle([...pickN(G.cards.filter(c => c.scam), G.drawScam), ...pickN(G.cards.filter(c => !c.scam), G.draw - G.drawScam)]).map(x => x[0]) : shuffle(G.cards).map(x => x[0]);
+  const N = order.length;
+
+  function card() {
+    if (i >= N) return finish();
+    locked = false;
+    const c = order[i];
+    screen(`
+    <section class="game" aria-label="Caça-golpe">
+      <div class="g-head"><span>Carta <b>${i + 1}</b> de ${N}</span><span class="streak" id="streak" aria-live="polite">🔥 ${streak}</span></div>
+      <div class="timer" role="timer" aria-label="Tempo"><i id="tbar"></i></div>
+      <div class="deck"><div class="gcard enter" id="gc"><span class="stamp s">GOLPE</span><span class="stamp l">LEGÍTIMA</span>${mock(c)}</div></div>
+      <div class="gbtns"><button class="gbtn s" id="bs">🚩 Golpe</button><button class="gbtn l" id="bl">✅ Legítima</button></div>
+      <div class="ghint">${c.link ? "Toque no link para ver o endereço real. " : ""}Arraste a carta ou use ← →</div>
+      <div id="gfb" aria-live="polite"></div>
+    </section>`, k);
+    $("#bs").onclick = () => answer("scam"); $("#bl").onclick = () => answer("legit");
+    $$(".lk").forEach(b => b.onclick = () => { b.classList.add("rev"); b.textContent = "🔗 " + b.dataset.url; b.disabled = true; });
+    startTimer(); bindDrag();
+  }
+  function startTimer() {
+    const b = $("#tbar"); if (!b) return;
+    const t0 = performance.now();
+    const tick = now => {
+      if (locked) return;
+      const left = Math.max(0, 1 - (now - t0) / (SECS * 1000));
+      b.style.transform = `scaleX(${left})`; b.style.backgroundPosition = `${(1 - left) * 100}% 0`;
+      if (left <= 0) return answer("timeout");
+      timers.push(requestAnimationFrame(tick));
+    };
+    timers.push(requestAnimationFrame(tick));
+  }
+  function bindDrag() {
+    const el = $("#gc"); let x0 = null, dx = 0;
+    const stS = el.querySelector(".stamp.s"), stL = el.querySelector(".stamp.l");
+    el.onpointerdown = e => { if (locked || e.target.closest(".lk")) return; x0 = e.clientX; dx = 0; el.classList.add("drag"); el.setPointerCapture(e.pointerId); };
+    el.onpointermove = e => {
+      if (x0 === null) return; dx = e.clientX - x0;
+      el.style.transform = `translateX(${dx}px) rotate(${dx / 18}deg)`;
+      stS.style.opacity = dx < -30 ? Math.min(1, -dx / 110) : 0; stL.style.opacity = dx > 30 ? Math.min(1, dx / 110) : 0;
+    };
+    const end = () => {
+      if (x0 === null) return; x0 = null; el.classList.remove("drag");
+      if (Math.abs(dx) > 100) answer(dx < 0 ? "scam" : "legit"); else { el.style.transform = ""; stS.style.opacity = stL.style.opacity = 0; }
+    };
+    el.onpointerup = end; el.onpointercancel = end;
+  }
+  function answer(choice) {
+    if (locked) return; locked = true;
+    const c = order[i], right = choice === (c.scam ? "scam" : "legit");
+    res.push(right ? 1 : 0);
+    streak = right ? streak + 1 : 0;
+    const el = $("#gc");
+    $("#bs").disabled = $("#bl").disabled = true;
+    if (choice === "timeout") { el.classList.add("shake"); }
+    else if (!reduced) { el.classList.remove("enter"); el.classList.add("drag"); void el.offsetWidth; el.classList.remove("drag"); el.style.transform = `translateX(${choice === "scam" ? -140 : 140}%) rotate(${choice === "scam" ? -22 : 22}deg)`; el.style.opacity = 0; }
+    const sk = $("#streak"); sk.textContent = `🔥 ${streak}`; sk.classList.remove("hot"); void sk.offsetWidth; if (right && streak > 1) sk.classList.add("hot");
+    const last = i === N - 1;
+    const verdict = c.scam ? "É golpe" : "É legítima";
+    $("#gfb").innerHTML = `<div class="gfb ${right ? "ok" : "no"}">
+      <h3>${right ? "✓ Acertou" : choice === "timeout" ? "⏱ Tempo esgotado" : "✗ Errou"} · ${verdict}${c.tag ? ` <span class="new">em alta em ${c.tag}</span>` : ""}</h3>
+      <div style="font-size:14px;margin-bottom:2px">${c.scam ? "Sinais de golpe:" : "Por que é legítima:"}</div>
+      <ul>${c.flags.map(f => `<li>${esc(f)}</li>`).join("")}</ul>
+      <div class="mc"><b>No McAfee:</b> ${esc(c.mcafee)}</div>
+      <div class="next"><button class="btn" id="gn">${last ? "Ver resultado da rodada" : "Próxima carta"}</button></div></div>`;
+    $("#gn").onclick = () => { i++; card(); }; $("#gn").focus({ preventScroll: true });
+    $("#gfb").scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "nearest" });
+  }
+  function finish() {
+    R[k] = res; persist();
+    const pts = gamePts(k), perfect = pts === N;
+    const msg = perfect ? "Olho clínico: nenhuma passou." : pts >= N - 1 ? "Muito bom. Só uma escapou." : "Golpe bem feito engana todo mundo. Reveja os sinais de cada carta.";
+    screen(`
+    <section class="card splash" style="position:relative;overflow:hidden">
+      <div class="confetti" id="cf" aria-hidden="true"></div>
+      <div class="badge pop">${perfect ? "🏆" : "🎯"}</div>
+      <div class="eyebrow rise">Rodada concluída</div>
+      <div class="big rise d1" id="cnt">0<small style="font-size:22px;color:var(--muted)"> de ${N}</small></div>
+      <p class="lead rise d2" style="margin-top:10px">${msg}</p>
+      <button class="btn go rise d3" id="cont">Continuar a missão</button>
+    </section>`, k);
+    // contador animado
+    const el = $("#cnt"); let n = 0; const step = () => { el.firstChild.nodeValue = n; if (n < pts) { n++; timers.push(setTimeout(step, reduced ? 0 : 260)); } }; step();
+    if (perfect && !reduced) confetti($("#cf"));
+    $("#cont").onclick = route;
+  }
+  document.onkeydown = e => { if (!locked && $("#gc")) { if (e.key === "ArrowLeft") answer("scam"); if (e.key === "ArrowRight") answer("legit"); } };
+  card();
+}
+function confetti(box) {
+  const cols = ["#F26A1B", "#FFB84D", "#17804A", "#0E8F80", "#B83232", "#13315c"];
+  for (let n = 0; n < 40; n++) { const i = document.createElement("i"); i.style.left = Math.random() * 100 + "%"; i.style.background = cols[n % cols.length]; i.style.animationDelay = Math.random() * .5 + "s"; i.style.animationDuration = 1.2 + Math.random() * 1.2 + "s"; box.appendChild(i); }
+}
+
+/* ============================================================
+   Simulador / vídeo interativo
+   ============================================================ */
+const PIP = `<div class="pip" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><circle cx="12" cy="8" r="4.5"/><path d="M3 21c0-5 4-8 9-8s9 3 9 8z"/></svg><span>Você</span></div>`;
+const TRUST = { 2: 22, 1: 4, 0: -22 };
+const moodOf = t => t >= 72 ? "😊 Animado(a)" : t >= 42 ? "🙂 Atento(a)" : t >= 22 ? "😕 Desconfiado(a)" : "😟 Preocupado(a)";
+const trustOf = k => play(k).t;
+const meterHtml = (k, who) => { const t = trustOf(k); return `<div class="meter" role="status"><b>Confiança ${who}</b><div class="bar" aria-hidden="true"><i id="trustbar" style="width:${t}%"></i></div><span class="mood" id="mood">${moodOf(t)}</span></div>`; };
+
+function playOverlay(v, label, onclick) {
+  const box = v.parentElement; if (!box) return;
+  box.querySelectorAll(".playfix").forEach(n => n.remove());
+  const b = document.createElement("button");
+  b.className = "playfix"; b.type = "button"; b.textContent = label;
+  b.onclick = () => { b.remove(); onclick(); };
+  box.appendChild(b);
+}
+function playClip(v, src, { loop = false, sound = true, onend } = {}) {
+  v.parentElement && v.parentElement.querySelectorAll(".playfix").forEach(n => n.remove());
+  v.loop = loop; v.muted = !sound || muted; v.src = MEDIA(src); v.onended = onend || null;
+  v.onerror = () => { const cc = v.parentElement && v.parentElement.querySelector(".cc"); if (cc && !/vídeo indisponível/.test(cc.textContent)) cc.insertAdjacentHTML("beforeend", '<div style="opacity:.8;font-size:.8em;margin-top:4px">(vídeo indisponível neste visualizador: siga pela legenda)</div>'); if (onend) onend(); };
+  const p = v.play();
+  if (p && p.catch) p.catch(() => {
+    // reprodução automática com som bloqueada: tenta sem som; se ainda assim falhar, pede um toque
+    v.muted = true;
+    const q = v.play();
+    const askTap = () => playOverlay(v, "▶ Tocar vídeo", () => { v.muted = muted; const r = v.play(); if (r && r.catch) r.catch(() => { v.muted = true; v.play(); }); });
+    if (q && q.catch) q.then(() => { if (sound && !muted) playOverlay(v, "🔊 Ativar som", () => { v.muted = false; }); }).catch(askTap); else askTap();
+  });
+}
+
+/* ---------- conversa ramificada (Marta) ---------- */
+function runBranch(k) {
+  const S = SIMS[k], P = play(k), s = S.scenes[P.cur];
+  R[k] = R[k].slice(0, P.n);
+  const client = pick(s.client, P.f, "text");
+  const label = s.stage ? `Etapa ${s.stage} de ${S.stages.length} · ${s.title}${s.retry ? " · segunda chance" : ""}` : s.title;
+  const opts = shuffle(s.options).filter(([o]) => cond(o.if, P.f));
+  screen(`
+  <section aria-label="Videochamada">
+    <div class="screen" id="scr">
+      <video id="vid" playsinline preload="auto" poster="${MEDIA(S.poster)}" aria-label="${esc(S.person.name)} falando"></video>
+      <div class="tag"><span class="live"></span> ${esc(S.display)}</div>
+      ${PIP}
+      <div class="cc has-ctl" id="cc">${esc(client)}</div>
+      <div class="ctl"><button id="snd" aria-pressed="${muted}">${muted ? "🔇 Som" : "🔊 Som"}</button><button id="skip">Pular ▸</button></div>
+      <div class="ring" id="ring"></div>
+    </div>
+    ${meterHtml(k, S.who)}
+  </section>
+  <section class="card" aria-live="polite">
+    <div class="eyebrow">${esc(label)}</div>
+    <div class="ctx">${esc(s.ctx)}</div>
+    ${s.aid ? `<div class="aid">${s.aid}</div>` : ""}
+    <div class="q" id="q">${esc(s.prompt)}</div>
+    <div class="wait" id="wait"><span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i></span> ${esc(S.person.short)} está falando… suas opções aparecem quando terminar.</div>
+    <ul class="opts hidden" id="opts" role="group" aria-labelledby="q">${opts.map(([o, idx]) => `<li><button class="opt" data-i="${idx}">${o.text}</button></li>`).join("")}</ul>
+    <div id="out"></div>
+  </section>`, k);
+  const vid = $("#vid"); let revealed = false;
+  const reveal = () => { if (revealed) return; revealed = true; $("#wait") && $("#wait").remove(); $("#opts").classList.remove("hidden"); $("#skip").style.display = "none"; if (s.clip) vid.pause(); };
+  $("#skip").onclick = reveal;
+  $("#snd").onclick = e => { muted = !muted; vid.muted = muted; e.currentTarget.textContent = muted ? "🔇 Som" : "🔊 Som"; e.currentTarget.setAttribute("aria-pressed", muted); };
+  $$(".opt").forEach(b => b.onclick = () => chooseBranch(k, P.cur, +b.dataset.i, b));
+  if (s.clip) {
+    playClip(vid, s.clip, { onend: reveal });
+    timers.push(setTimeout(() => { if (!revealed && vid.paused && vid.readyState < 2) reveal(); }, 4500));
+  } else if (s.still || !S.reactions) {
+    // a fala acabou de tocar na resposta anterior: só a legenda, opções logo em seguida
+    timers.push(setTimeout(reveal, reduced ? 0 : 900));
+  } else {
+    // fala sem vídeo próprio: reação em loop e a fala na legenda, com tempo de leitura
+    playClip(vid, S.reactions[s.mood ?? 1], { loop: true, sound: false });
+    timers.push(setTimeout(reveal, reduced ? 0 : Math.max(2500, client.length * 45)));
+  }
+}
+
+function chooseBranch(k, sid, idx, btn) {
+  const S = SIMS[k], s = S.scenes[sid], o = s.options[idx];
+  const before = play(k).stage[s.stage] || 0;
+  R[k].push({ s: sid, o: idx });
+  const P = play(k);
+  $$(".opt").forEach(b => b.disabled = true); btn.classList.add("picked");
+  $("#trustbar").style.width = P.t + "%"; $("#mood").textContent = moodOf(P.t);
+  header(k);
+  $("#ring").className = "ring " + (o.q === 2 ? "good" : o.q === 0 ? "bad" : "");
+  const vid = $("#vid"), cc = $("#cc");
+  cc.innerHTML = `<b>${esc(S.person.short)}:</b> ${esc(o.reply)}`; cc.classList.remove("swap"); void cc.offsetWidth; cc.classList.add("swap");
+  if (o.clip) playClip(vid, o.clip, { sound: true });                // vídeo interativo: o cliente responde falando
+  else {
+    // reação em loop segue o humor do cliente, não a nota: mentira em que ele acredita = satisfeito; correção honesta = "hmm"
+    const mood = o.dt === undefined ? o.q : o.dt > 0 ? 2 : 1;
+    playClip(vid, S.reactions[mood], { loop: true, sound: false });
+  }
+  const tag = o.q === 2 ? ["✓", "Ótima escolha"] : o.q === 1 ? ["~", "Funciona, mas dá para melhorar"] : ["!", "Cuidado"];
+  const gain = s.stage ? (P.stage[s.stage] || 0) - before : null;
+  const ptsTxt = gain === null ? "não vale ponto, mas muda o final" : `+${gain} ${gain === 1 ? "ponto" : "pontos"}${s.retry && o.q === 2 ? " (segunda chance vale no máximo 1)" : ""}`;
+  const best = o.q < 2 ? `<div class="best"><b>Melhor caminho:</b> ${esc(s.best)}</div>` : "";
+  const memo = o.memo ? `<div class="memo">🧠 ${esc(o.memo)}</div>` : "";
+  const warn = P.end === "desligou" ? `<div class="memo">📵 A confiança da ${esc(S.person.short)} chegou ao limite.</div>` : "";
+  $("#out").innerHTML = `
+    <div class="fb p${o.q}" role="status">
+      <div class="tagline"><span aria-hidden="true">${tag[0]}</span>${tag[1]} · ${ptsTxt}</div>
+      <div>${esc(o.why)}</div>${memo}${warn}${best}
+      <div class="src">Fonte: ${esc(s.src)}</div>
+    </div>
+    <div class="next"><button class="btn" id="next">${P.end ? "Ver como terminou" : "Continuar a conversa"}</button></div>`;
+  $("#next").onclick = () => P.end ? branchEnd(k) : runBranch(k);
+  $("#next").focus({ preventScroll: true });
+  $("#out").scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "nearest" });
+  if (R[k].length === 1) SCORM.set("cmi.core.lesson_status", "incomplete");
+  persist();
+}
+
+function branchEnd(k) {
+  const S = SIMS[k], P = play(k), E = S.ends[P.end], max = S.max, nxt = nextPhase();
+  const epi = P.end === "cancelou"
+    ? [...Object.keys(S.lies).filter(x => P.f.has(x)).map(x => S.lies[x]), S.cancelLine]
+    : E.epi;
+  const rows = S.stages.map((n, i) => `<tr><td>${i + 1}. ${esc(n)}</td><td>${P.stage[i + 1] ?? "–"} de 2</td></tr>`).join("")
+    + `<tr><td><b>Desfecho:</b> ${esc(E.title)}</td><td>${E.pts} de 2</td></tr>`;
+  screen(`
+  <section class="card">
+    <div class="eyebrow rise">Fim da chamada</div>
+    <h1 class="rise d1">${E.icon} ${esc(E.title)}</h1>
+    <div class="screen rise d2" style="margin:12px 0"><video id="vid" playsinline poster="${MEDIA(S.poster)}" aria-hidden="true"></video><div class="tag"><span class="live"></span> ${esc(S.display)} · chamada encerrada</div><div class="cc">${esc(E.line)}</div></div>
+    <div class="later rise d3"><b>Algumas semanas depois…</b>${epi.map(x => `<p>${esc(x)}</p>`).join("")}</div>
+    <table class="recap rise d3">${rows}</table>
+    <p class="rise d4" style="text-align:center"><b>${esc(S.person.name)}: ${P.pts} de ${max} pontos.</b> ${P.pts >= max * .8 ? "Conversa conduzida com firmeza e sem promessas vazias." : P.pts >= max * .5 ? "Boa conversa, com pontos para ajustar." : "Vale rever os feedbacks: cada erro aqui viraria reclamação na vida real."}</p>
+    <div class="next" style="text-align:center"><button class="btn go" id="cont">${nxt ? "Próxima fase" : "Ver resultado final"}</button></div>
+  </section>`, k);
+  if (E.clip) playClip($("#vid"), E.clip, { sound: true });
+  else if (S.reactions) playClip($("#vid"), S.reactions[E.mood], { loop: true, sound: false });
+  $("#cont").onclick = route;
+}
+
+function runSim(k) { return runBranch(k); }   // os dois clientes usam a conversa ramificada
+
+/* ============================================================
+   Resultado
+   ============================================================ */
+function showResult() {
+  const pts = totalPts(), max = totalMax(), pct = Math.round(pts / max * 100), passed = pct >= PASS;
+  SCORM.set("cmi.core.score.min", 0); SCORM.set("cmi.core.score.max", 100); SCORM.set("cmi.core.score.raw", pct);
+  SCORM.set("cmi.core.lesson_status", passed ? "passed" : "failed"); persist();
+  const msg = pct >= 90 ? "Pronto para ligar: você enxerga golpe, traduz o produto e promete só o que existe."
+    : passed ? "Aprovado. Revise as fases com nota baixa antes da próxima ligação."
+    : "Ainda não. Refaça a missão: os feedbacks explicam o porquê de cada resposta.";
+  const rx = passed ? SIMS.marta.reactions[2] : SIMS.marta.reactions[0];
+  const rows = [["Simulador da Marta", "marta"], ["Vídeo do Seu Jorge", "jorge"], ["Caça-golpe final", "g"]]
+    .map(([n, k]) => { const st = FLOW.find(f => f.k === k); return `<tr><td>${n}</td><td>${phasePts(st)} de ${phaseMax(st)}</td></tr>`; }).join("")
+    + `<tr><td>Vídeo de abertura</td><td>${R.intro === "seen" ? "assistido" : "pulado"}</td></tr><tr><td>Leitura do material</td><td>${R.read === "read" ? "feita" : "pulada"}</td></tr>`;
+  screen(`
+  <section class="card" style="text-align:center">
+    <div class="eyebrow rise">Resultado da missão</div>
+    <svg class="ringsvg ${passed ? "" : "fail"}" viewBox="0 0 160 160" aria-hidden="true"><circle class="bg" cx="80" cy="80" r="70"/><circle class="fg" id="rfg" cx="80" cy="80" r="70"/></svg>
+    <div class="ringnum" id="rnum">0%</div>
+    <div class="verdict ${passed ? "ok" : "no"} rise d2">${passed ? "Aprovado" : "Refazer"} · ${pts} de ${max} pontos</div>
+    <p class="rise d3">${msg}</p>
+    <div class="screen rise d3" style="margin:10px 0;text-align:left"><video id="vid" playsinline muted loop autoplay poster="${MEDIA('media/marta.jpg')}" src="${MEDIA(rx)}" aria-hidden="true"></video><div class="tag"><span class="live"></span> Marta Souza · chamada encerrada</div><div class="cc">${passed ? "Gostei de conversar com você. Pode mandar o pedido!" : "Vou pensar com calma e te retorno…"}</div></div>
+    <table class="recap" style="text-align:left">${rows}</table>
+    <div class="pocket" style="text-align:left"><h3>Cartão de bolso: leve para a próxima ligação</h3><ol>${POCKET.map(l => `<li>${l}</li>`).join("")}</ol></div>
+    <div class="noprom" style="text-align:left">${esc(NOPROMISE)}</div>
+    <div class="next" style="text-align:center"><button class="btn ghost" id="retry">Refazer a missão</button></div>
+  </section>`);
+  header(null);
+  const fg = $("#rfg"), num = $("#rnum");
+  requestAnimationFrame(() => { fg.style.strokeDashoffset = 440 - 440 * pct / 100; });
+  let n = 0; const step = () => { num.textContent = n + "%"; if (n < pct) { n += Math.max(1, Math.ceil((pct - n) / 12)); timers.push(setTimeout(step, reduced ? 0 : 50)); } else num.textContent = pct + "%"; }; step();
+  $("#retry").onclick = () => { R = { intro: false, read: null, marta: [], jorge: [], g: null }; startedAt = Date.now(); showHub(); header(null); };
+}
+
+/* ============================================================
+   Início
+   ============================================================ */
+function boot() {
+  SCORM.init();
+  if (SCORM.connected) {
+    const status = SCORM.get("cmi.core.lesson_status");
+    if (!status || status === "not attempted") SCORM.set("cmi.core.lesson_status", "incomplete");
+    try {
+      const sd = JSON.parse(SCORM.get("cmi.suspend_data") || "{}");
+      if (sd.i) R.intro = sd.i;
+      if (sd.r) R.read = sd.r;
+      if (Array.isArray(sd.g)) R.g = sd.g;
+      if (Array.isArray(sd.marta)) { R.marta = sd.marta.map(x => ({ s: x[0], o: x[1] })); R.marta = R.marta.slice(0, play("marta").n); }
+      if (Array.isArray(sd.jorge)) { R.jorge = sd.jorge.map(x => ({ s: x[0], o: x[1] })); R.jorge = R.jorge.slice(0, play("jorge").n); }
+    } catch (e) { R = { intro: false, read: null, marta: [], jorge: [], g: null }; }
+  }
+  const any = R.intro || R.read || R.g || R.marta.length || R.jorge.length;
+  header(null);
+  if (any) route(); else showHub();
+}
+window.addEventListener("pagehide", () => stopMedia());
+window.addEventListener("beforeunload", () => { SCORM.set("cmi.core.exit", "suspend"); SCORM.set("cmi.core.session_time", fmtTime(Date.now() - startedAt)); SCORM.end(); });
+boot();
+</script>
+</body>
+</html>
